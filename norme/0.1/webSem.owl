@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/pocwebsem/ontology#"
+     xml:base="http://www.example.org/pocwebsem/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:poc="http://www.example.org/pocwebsem/ontology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/pocwebsem/ontology">
+        <owl:versionIRI rdf:resource="http://www.example.org/pocwebsem/ontology/0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#champDeRecherche -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#champDeRecherche">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#ChampDeRecherche"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#commune -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#commune">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Commune"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#domaineDiplome -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#domaineDiplome">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#DomaineDiplome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#intitule -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#intitule"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#intituleComposante -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#intituleComposante">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/pocwebsem/ontology#intitule"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#IntituleComposante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#intituleLaboratoire -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#intituleLaboratoire">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/pocwebsem/ontology#intitule"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#IntituleLaboratoire"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#lieuFormation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#lieuFormation">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Commune"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#mentionDiplome -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#mentionDiplome">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#MentionDiplome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#niveau -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#niveau">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Niveau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#parcoursDiplome -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#parcoursDiplome">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#ParcoursDiplome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#rattachementExterne -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#rattachementExterne">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Etablissement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#rattachementLaboratoire -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#rattachementLaboratoire">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#specialiteDiplome -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#specialiteDiplome">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#SpecialiteDiplome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#structureDeRattachement -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#structureDeRattachement">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Etablissement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#universiteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/pocwebsem/ontology#universiteDe">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.example.org/pocwebsem/ontology#Universite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#adresse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#adresse">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#associationAuCNRS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#associationAuCNRS">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#axeDeRecherche -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#axeDeRecherche">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#codePostal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#codePostal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#contratDApprentissage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#contratDApprentissage">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#contratDeProfessionnalisation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#contratDeProfessionnalisation">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#courriel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#courriel"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#courrielSecretariat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#courrielSecretariat">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/pocwebsem/ontology#courriel"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#courrielSecretariatFormation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#courrielSecretariatFormation">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/pocwebsem/ontology#courriel"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#dateDeDebut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#dateDeDebut">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#dateDeFinObligatoire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#dateDeFinObligatoire">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#direction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#direction">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/pocwebsem/ontology#responsable"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#dureeDeStage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#dureeDeStage">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#exempleDeSujetDeMemoire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#exempleDeSujetDeMemoire">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#formationContinue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#formationContinue">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#formationInitiale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#formationInitiale">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#informationsComplementaires -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#informationsComplementaires">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#intituleLaboratoireAbrege -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#intituleLaboratoireAbrege">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#nombreDeChercheur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#nombreDeChercheur">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#referenceLaboratoire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#referenceLaboratoire">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#responsable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#responsable"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#responsablePedagogique -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#responsablePedagogique">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/pocwebsem/ontology#responsable"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#serviceStageEmploi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#serviceStageEmploi">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#siteInternet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#siteInternet">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#siteInternetStageEmploi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#siteInternetStageEmploi">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#telephone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#telephone">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#typeDeStage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#typeDeStage">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#voieRecherche -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/pocwebsem/ontology#voieRecherche">
+        <rdfs:domain rdf:resource="http://www.example.org/pocwebsem/ontology#Formation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#ChampDeRecherche -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#ChampDeRecherche"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Commune -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Commune"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#DomaineDiplome -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#DomaineDiplome"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Ecole -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Ecole">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/pocwebsem/ontology#Etablissement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Etablissement -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Etablissement"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Formation -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Formation"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Intitule -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Intitule"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#IntituleComposante -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#IntituleComposante">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/pocwebsem/ontology#Intitule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#IntituleLaboratoire -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#IntituleLaboratoire">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/pocwebsem/ontology#Intitule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Laboratoire -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#MentionDiplome -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#MentionDiplome"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Niveau -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Niveau">
+        <rdfs:comment>Niveau de formation de la formation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#ParcoursDiplome -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#ParcoursDiplome"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#SpecialiteDiplome -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#SpecialiteDiplome"/>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#UFR -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#UFR">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/pocwebsem/ontology#Etablissement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Universite -->
+
+    <owl:Class rdf:about="http://www.example.org/pocwebsem/ontology#Universite">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/pocwebsem/ontology#Etablissement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#GestionDeProjet -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/pocwebsem/ontology#GestionDeProjet">
+        <rdf:type rdf:resource="http://www.example.org/pocwebsem/ontology#ChampDeRecherche"/>
+        <rdfs:label>Gestion de Projets - Marketing digital - Consommations culturelles</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#L1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/pocwebsem/ontology#L1">
+        <rdf:type rdf:resource="http://www.example.org/pocwebsem/ontology#Laboratoire"/>
+        <champDeRecherche rdf:resource="http://www.example.org/pocwebsem/ontology#GestionDeProjet"/>
+        <intituleLaboratoire rdf:resource="http://www.example.org/pocwebsem/ontology#MaisonDesSciences"/>
+        <universiteDe rdf:resource="http://www.example.org/pocwebsem/ontology#Poitiers"/>
+        <intituleLaboratoireAbrege>MSHS</intituleLaboratoireAbrege>
+        <referenceLaboratoire>USR 3565</referenceLaboratoire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#MaisonDesSciences -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/pocwebsem/ontology#MaisonDesSciences">
+        <rdfs:label>Maison des Sciences de l&apos;Homme et de la Société</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/pocwebsem/ontology#Poitiers -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/pocwebsem/ontology#Poitiers">
+        <rdf:type rdf:resource="http://www.example.org/pocwebsem/ontology#Commune"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
