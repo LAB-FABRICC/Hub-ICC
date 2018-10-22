@@ -1,0 +1,8 @@
+- [ ] Modifier l'URI de l'ontologie.
+- [ ] Définir un préfixe d'ontologie (poc pour le moment).
+- [ ] Modifier l'URI de l'ontologie.
+- [ ] Formaliser la classe Etablissement en accord avec le client (nammage, structure, ...).
+- [ ] Est-ce que Laboratoire > Axe de Recherche, Formation > Exemple de sujet de mémoire et Formation > Rattachement Laboratoire sont ordonnés et/ou ont une cardinalité maximale ?
+- [ ] Réfléchir à mieux formaliser les données annotées "Eventuellement E" dans le fichier synthèse.ods en vue de l'association de graph avec l'Open Data.
+- [ ] Mieux caractériser les properties (functional, transitive, ...).
+- [ ] Etudier la codification utilisée par Dbpedia ou WikiData (tous les objets sont codés par un id unique et la description de l'entité est géré avec des balises rdfs:label).

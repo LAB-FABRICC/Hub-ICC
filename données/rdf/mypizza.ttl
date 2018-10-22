@@ -1,0 +1,25 @@
+@prefix : <http://localhost/mypizza.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix piz: <http://localhost/pizza.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://localhost/mypizza.ttl> .
+
+<http://localhost/mypizza.ttl#myHam> rdf:type piz:Ham .
+
+<http://localhost/mypizza.ttl#myMozza> rdf:type piz:Mozzarella .
+
+<http://localhost/mypizza.ttl#myTomato> rdf:type piz:Tomato .
+
+<http://localhost/mypizza.ttl#myTuna> rdf:type piz:Tuna .
+
+<http://localhost/mypizza.ttl#myPizzaComplex> rdf:type piz:Complex ;
+                piz:hasTopping <http://localhost/mypizza.ttl#myHam> ,
+                               <http://localhost/mypizza.ttl#myMozza> ,
+                               <http://localhost/mypizza.ttl#myTomato> .
+
+<http://localhost/mypizza.ttl#myPizzaSimple> rdf:type piz:Simple ;
+               piz:hasTopping <http://localhost/mypizza.ttl#myMozza> ,
+                              <http://localhost/mypizza.ttl#myTomato> .

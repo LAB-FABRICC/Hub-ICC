@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost/myPizza.owl#"
+     xml:base="http://localhost/myPizza.owl"
+     xmlns:piz="http://localhost/pizza.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://localhost/pizza.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/pizza.owl#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/pizza.owl#hasTopping">
+        <owl:inverseOf rdf:resource="http://localhost/pizza.owl#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://localhost/pizza.owl#Pizza"/>
+        <rdfs:range rdf:resource="http://localhost/pizza.owl#Topping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/pizza.owl#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/pizza.owl#isToppingOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/pizza.owl#Cheese -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Cheese">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Complex -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Complex">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Named"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/pizza.owl#Ham"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/pizza.owl#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/pizza.owl#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://localhost/pizza.owl#Ham"/>
+                            <rdf:Description rdf:about="http://localhost/pizza.owl#Mozzarella"/>
+                            <rdf:Description rdf:about="http://localhost/pizza.owl#Tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://localhost/pizza.owl#Simple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Fish -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Fish">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Ham -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Ham">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Meat -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Meat">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Mozzarella -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Mozzarella">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Cheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Named -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Named">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#NonVegetarianPizza -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#NonVegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/pizza.owl#Pizza"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://localhost/pizza.owl#VegetarianPizza"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://localhost/pizza.owl#VegetarianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#NonVegetarianTopping -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#NonVegetarianTopping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/pizza.owl#Topping"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://localhost/pizza.owl#VegetarianTopping"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://localhost/pizza.owl#VegetarianTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Pizza -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Pizza">
+        <owl:disjointWith rdf:resource="http://localhost/pizza.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Simple -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Simple">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Named"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/pizza.owl#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/pizza.owl#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://localhost/pizza.owl#Mozzarella"/>
+                            <rdf:Description rdf:about="http://localhost/pizza.owl#Tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Tomato -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Tomato">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Vegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Topping -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Topping"/>
+    
+
+
+    <!-- http://localhost/pizza.owl#Tuna -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Tuna">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Fish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#Vegetable -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://localhost/pizza.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#VegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/pizza.owl#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/pizza.owl#hasTopping"/>
+                        <owl:allValuesFrom rdf:resource="http://localhost/pizza.owl#VegetarianTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/pizza.owl#VegetarianTopping -->
+
+    <owl:Class rdf:about="http://localhost/pizza.owl#VegetarianTopping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/pizza.owl#Topping"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://localhost/pizza.owl#Fish"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://localhost/pizza.owl#Meat"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/pizza.owl#Cheese"/>
+            <rdf:Description rdf:about="http://localhost/pizza.owl#Fish"/>
+            <rdf:Description rdf:about="http://localhost/pizza.owl#Meat"/>
+            <rdf:Description rdf:about="http://localhost/pizza.owl#Vegetable"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
