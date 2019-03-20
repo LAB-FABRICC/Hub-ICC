@@ -45,18 +45,30 @@ public class RDFController {
 
     @GetMapping("/labs")
     public ResponseEntity<String> laboratory() throws IOException {
-        final String filePath = "files/INSECT-Répertoire des Laboratoires ICC.csv";
+        final String csvFilePath = "files/INSECT-Répertoire des Laboratoires ICC.csv";
+        final int csvLineToSkip = 4;
         final String templateName = "laboratoire";
         final String parentTemplateName = "laboratoires_rdf";
-
-        final String finalTemplate = generateRdf(Laboratoire.class, filePath, templateName, parentTemplateName);
+        final String finalTemplate = generateRdf(Laboratoire.class, csvFilePath, csvLineToSkip, templateName, parentTemplateName);
 
         return ResponseEntity.ok(finalTemplate);
     }
 
-    private <T> String generateRdf(final Class<T> clazz, final String filePath, final String templateName, final String parentTemplateName) throws IOException {
+    /**
+     * Generate rdf.
+     * @param csvClazz cvs class
+     * @param csvFilePath csv file path
+     * @param csvLineToSkip csv line to skip
+     * @param templateName thymeleaf template
+     * @param parentTemplateName parent thymeleaf template
+     * @param <T> object with csv annotation
+     * @return string
+     * @throws IOException
+     */
+    private <T> String generateRdf(final Class<T> csvClazz, final String csvFilePath, final int csvLineToSkip, final String templateName, final String parentTemplateName) throws IOException {
+
         final List<String> templates = CsvBuilder
-                .readCsvFile(filePath, 4, clazz)
+                .readCsvFile(csvFilePath, csvLineToSkip, csvClazz)
                 .stream()
                 .map(item -> this.objectMapper.convertValue(item, Map.class))
                 .peek(System.out::println)
