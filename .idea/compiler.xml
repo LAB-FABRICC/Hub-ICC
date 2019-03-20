@@ -9,7 +9,7 @@
         <module name="batch" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="batch" target="11" />
     </bytecodeTargetLevel>
   </component>

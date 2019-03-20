@@ -1,5 +1,7 @@
 package net.scub.hubicc.batch.model;
 
+import com.opencsv.bean.CsvBindByPosition;
+
 public class Laboratoire {
 
     public static String[] FIELDS = {
@@ -31,36 +33,61 @@ public class Laboratoire {
             "informationsComplementaires"
     };
 
+    @CsvBindByPosition(position = 0)
     private String id;
 
     // Identité
+    @CsvBindByPosition(position = 1)
     private String champDeRecherche;
+    @CsvBindByPosition(position = 2)
     private String university;
+    @CsvBindByPosition(position = 3)
     private String intitule;
+    @CsvBindByPosition(position = 4)
     private String intituleAbrege;
+    @CsvBindByPosition(position = 5)
     private String referenceLaboratoire;
+    @CsvBindByPosition(position = 6)
     private String structureRattachement;
+    @CsvBindByPosition(position = 7)
     private String rattachementExterne;
 
     //Recherche
+    @CsvBindByPosition(position = 8)
     private String nombreChercheurs;
+    @CsvBindByPosition(position = 9)
     private String associationCnrs;
+    @CsvBindByPosition(position = 10)
     private String axeRecherche1;
+    @CsvBindByPosition(position = 11)
     private String axeRecherche2;
+    @CsvBindByPosition(position = 12)
     private String axeRecherche3;
+    @CsvBindByPosition(position = 13)
     private String axeRecherche4;
+    @CsvBindByPosition(position = 14)
     private String axeRecherche5;
+    @CsvBindByPosition(position = 15)
     private String axeRecherche6;
+    @CsvBindByPosition(position = 16)
     private String axeRecherche7;
+    @CsvBindByPosition(position = 17)
     private String axeRecherche8;
 
     // Coordonnées
+    @CsvBindByPosition(position = 18)
     private String direction;
+    @CsvBindByPosition(position = 19)
     private String siteInternet;
+    @CsvBindByPosition(position = 20)
     private String courrielSecretariat;
+    @CsvBindByPosition(position = 21)
     private String telephone;
+    @CsvBindByPosition(position = 22)
     private String adresse;
+    @CsvBindByPosition(position = 23)
     private String codePostal;
+    @CsvBindByPosition(position = 24)
     private String commune;
 
     // Divers
@@ -272,5 +299,37 @@ public class Laboratoire {
 
     public void setInformationsComplementaires(String informationsComplementaires) {
         this.informationsComplementaires = informationsComplementaires;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id:'" + id + '\'' +
+                ", champDeRecherche:'" + champDeRecherche + '\'' +
+                ", university:'" + university + '\'' +
+                ", intitule:'" + intitule + '\'' +
+                ", intituleAbrege:'" + intituleAbrege + '\'' +
+                ", referenceLaboratoire:'" + referenceLaboratoire + '\'' +
+                ", structureRattachement:'" + structureRattachement + '\'' +
+                ", rattachementExterne:'" + rattachementExterne + '\'' +
+                ", nombreChercheurs:'" + nombreChercheurs + '\'' +
+                ", associationCnrs:'" + associationCnrs + '\'' +
+                ", axeRecherche1:'" + axeRecherche1 + '\'' +
+                ", axeRecherche2:'" + axeRecherche2 + '\'' +
+                ", axeRecherche3:'" + axeRecherche3 + '\'' +
+                ", axeRecherche4:'" + axeRecherche4 + '\'' +
+                ", axeRecherche5:'" + axeRecherche5 + '\'' +
+                ", axeRecherche6:'" + axeRecherche6 + '\'' +
+                ", axeRecherche7:'" + axeRecherche7 + '\'' +
+                ", axeRecherche8:'" + axeRecherche8 + '\'' +
+                ", direction:'" + direction + '\'' +
+                ", siteInternet:'" + siteInternet + '\'' +
+                ", courrielSecretariat:'" + courrielSecretariat + '\'' +
+                ", telephone:'" + telephone + '\'' +
+                ", adresse:'" + adresse + '\'' +
+                ", codePostal:'" + codePostal + '\'' +
+                ", commune:'" + commune + '\'' +
+                ", informationsComplementaires:'" + informationsComplementaires + '\'' +
+                '}';
     }
 }
