@@ -1,4 +1,4 @@
-package net.scub.hubicc.batch;
+package net.scub.hubicc.batch.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.scub.hubicc.batch.model.Laboratoire;
@@ -6,6 +6,7 @@ import net.scub.hubicc.batch.tools.csv.CsvBuilder;
 import net.scub.hubicc.batch.tools.thymeleaf.ThymeleafBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -24,7 +25,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
-public class BatchController {
+@RequestMapping("/rdf")
+public class RDFController {
 
     private final ThymeleafBuilder thymeleafBuilder;
 
@@ -35,13 +37,13 @@ public class BatchController {
      *
      * @param thymeleafBuilder thymeleafBuilder
      */
-    public BatchController(ThymeleafBuilder thymeleafBuilder) {
+    public RDFController(ThymeleafBuilder thymeleafBuilder) {
         this.thymeleafBuilder = thymeleafBuilder;
         this.objectMapper = new ObjectMapper();
     }
 
 
-    @GetMapping("/export_lab")
+    @GetMapping("/labs")
     public ResponseEntity<String> laboratory() throws IOException {
         final String filePath = "files/INSECT-Répertoire des Laboratoires ICC.csv";
         final String templateName = "laboratoire";
