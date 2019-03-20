@@ -1,7 +1,7 @@
 package net.scub.hubicc.batch;
 
 import net.scub.hubicc.batch.model.Laboratoire;
-import net.scub.hubicc.batch.model.LaboratoireRDF;
+import net.scub.hubicc.batch.model.LaboratoireRDFOld;
 import net.scub.hubicc.batch.processor.LaboratoireItemProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -51,13 +51,13 @@ public class BatchLaboratoireConfig {
     }
 
     @Bean
-    public FlatFileItemWriter<LaboratoireRDF> writer() { // TODO replace with RDF writer
-        return new FlatFileItemWriterBuilder<LaboratoireRDF>()
+    public FlatFileItemWriter<LaboratoireRDFOld> writer() { // TODO replace with RDF writer
+        return new FlatFileItemWriterBuilder<LaboratoireRDFOld>()
                 .name("personItemWriter")
                 .resource(new FileSystemResource("norme/0.1/laboratoire.csv")) // TODO Rendre fichier paramétrable
                 .delimited()
                 .delimiter(";")
-                .names(LaboratoireRDF.FIELDS)
+                .names(LaboratoireRDFOld.FIELDS)
                 .build();
     }
 
@@ -72,7 +72,7 @@ public class BatchLaboratoireConfig {
     @Bean
     public Step step1() {
         return steps.get("step1")
-                .<Laboratoire, LaboratoireRDF>chunk(10)
+                .<Laboratoire, LaboratoireRDFOld>chunk(10)
                 .reader(reader())
                 .processor(processor()) // TODO A voir si besoin
                 .writer(writer())

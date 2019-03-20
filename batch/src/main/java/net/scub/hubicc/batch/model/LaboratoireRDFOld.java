@@ -1,6 +1,6 @@
 package net.scub.hubicc.batch.model;
 
-public class LaboratoireRDF {
+public class LaboratoireRDFOld {
 
     public static String[] FIELDS = {
             "idRef",
