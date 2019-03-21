@@ -43,7 +43,7 @@ public abstract class AbstractController<T> {
             resource.addProperty(property, model.createResource(uni));
     }
 
-    protected void generateRdf(final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer, final HttpServletResponse response) throws IOException {
+    private void generateRdf(final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer, final HttpServletResponse response) throws IOException {
         final Model model = ModelFactory.createDefaultModel();
 
         CsvBuilder
@@ -59,8 +59,6 @@ public abstract class AbstractController<T> {
             e.printStackTrace();
         }
     }
-
-    protected abstract Class<T> getClazz();
 
     protected void addProperty(Resource resource, Property label, String field) {
         if (StringUtils.isNotEmpty(field))
@@ -89,14 +87,17 @@ public abstract class AbstractController<T> {
         final String csvFilePath = getCsvFilePath();
         final int csvLineToSkip = getCsvLineToSkip();
 
-        generateRdf(csvFilePath, csvLineToSkip, getPredicate(), getConsumer(), response);
+        generateRdf(csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF(), response);
     }
 
-    public abstract Consumer<ImmutablePair<Model, T>> getConsumer();
+
+    protected abstract Class<T> getClazz();
+
+    public abstract Consumer<ImmutablePair<Model, T>> convertItemToRDF();
 
     public abstract int getCsvLineToSkip();
 
     public abstract String getCsvFilePath();
 
-    public abstract Predicate<T> getPredicate();
+    public abstract Predicate<T> predicateExcludeItem();
 }

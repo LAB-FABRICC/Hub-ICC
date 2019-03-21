@@ -25,7 +25,22 @@ public class RDFController extends AbstractController<Laboratoire> {
     }
 
     @Override
-    public Consumer<ImmutablePair<Model, Laboratoire>> getConsumer() {
+    public int getCsvLineToSkip() {
+        return 4;
+    }
+
+    @Override
+    public String getCsvFilePath() {
+        return "files/INSECT-Répertoire des Laboratoires ICC.csv";
+    }
+
+    @Override
+    public Predicate<Laboratoire> predicateExcludeItem() {
+        return (Laboratoire lab) -> StringUtils.isNotEmpty(lab.getUniversity());
+    }
+
+    @Override
+    public Consumer<ImmutablePair<Model, Laboratoire>> convertItemToRDF() {
         return (ImmutablePair<Model, Laboratoire> pair) -> {
             final Model model = pair.left;
             final Laboratoire item = pair.right;
@@ -77,20 +92,5 @@ public class RDFController extends AbstractController<Laboratoire> {
             addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France");
 
         };
-    }
-
-    @Override
-    public int getCsvLineToSkip() {
-        return 4;
-    }
-
-    @Override
-    public String getCsvFilePath() {
-        return "files/INSECT-Répertoire des Laboratoires ICC.csv";
-    }
-
-    @Override
-    public Predicate<Laboratoire> getPredicate() {
-        return (Laboratoire lab) -> StringUtils.isNotEmpty(lab.getUniversity());
     }
 }
