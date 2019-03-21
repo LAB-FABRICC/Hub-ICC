@@ -9,9 +9,7 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
-import org.apache.jena.vocabulary.ORG;
-import org.apache.jena.vocabulary.RDFS;
-import org.apache.jena.vocabulary.SKOS;
+import org.apache.jena.vocabulary.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/rdf")
@@ -58,16 +57,17 @@ public class RDFController {
             final Resource resource = model.createResource(aboutUrl + item.getId());
 
             // Identité
-            addProperty(resource, RDFS.label, item.getChampDeRecherche()); // TODO
+            addProperty(resource, ORG.classification, item.getChampDeRecherche());
 
-            getUniversityResource(item.getUniversity()).forEach(uni -> addResource(model, resource, uni));
+            getUniversityResource(item.getUniversity()).forEach(uni -> addResource(model, resource, ORG.unitOf, uni));
 
             addProperty(resource, SKOS.prefLabel, item.getIntitule());
             addProperty(resource, SKOS.altLabel, item.getIntituleAbrege());
 
-            addProperty(resource, RDFS.label, item.getReferenceLaboratoire()); // TODO
-            addProperty(resource, RDFS.label, item.getStructureRattachement()); // TODO
-            addProperty(resource, RDFS.label, item.getRattachementExterne()); // TODO
+            addProperty(resource, SKOS.prefLabel, item.getReferenceLaboratoire());
+
+            addProperty(resource, ORG.unitOf, item.getStructureRattachement());
+            addProperty(resource, ORG.unitOf, item.getRattachementExterne());
 
             //Recherche
             addProperty(resource, RDFS.label, item.getNombreChercheurs()); // TODO
@@ -83,21 +83,29 @@ public class RDFController {
 
             // Coordonnées
             addProperty(resource, FOAF.name, item.getDirection());
-            addProperty(resource, RDFS.label, item.getSiteInternet()); // TODO
-            addProperty(resource, RDFS.label, item.getCourrielSecretariat()); // TODO
-            addProperty(resource, RDFS.label, item.getTelephone()); // TODO
-            addProperty(resource, RDFS.label, item.getAdresse()); // TODO
-            addProperty(resource, RDFS.label, item.getCodePostal()); // TODO
-            addProperty(resource, RDFS.label, item.getCommune()); // TODO
+            addProperty(resource, VCARD4.url, item.getSiteInternet());
+
+            addProperty(resource, VCARD4.email, item.getCourrielSecretariat());
+            addProperty(resource, VCARD4.tel, item.getTelephone());
+
+            final String address = List.of(item.getAdresse(), item.getCodePostal(), item.getCommune())
+                    .stream()
+                    .filter(StringUtils::isNoneEmpty)
+                    .collect(Collectors.joining(" "));
+
+            addProperty(resource, ORG.siteAddress, address);
+
+
+            addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France");
 
         };
 
         generateRdf(Laboratoire.class, csvFilePath, csvLineToSkip, (Laboratoire lab) -> StringUtils.isNotEmpty(lab.getUniversity()), consumer, response);
     }
 
-    private void addResource(Model model, Resource resource, String uni) {
+    private void addResource(Model model, Resource resource, Property property, String uni) {
         if (StringUtils.isNotEmpty(uni))
-            resource.addProperty(ORG.unitOf, model.createResource(uni));
+            resource.addProperty(property, model.createResource(uni));
     }
 
     /**
