@@ -60,10 +60,11 @@ public class RDFController {
             // Identité
             addProperty(resource, RDFS.label, item.getChampDeRecherche()); // TODO
 
-            getUniversityResource(item.getUniversity()).forEach(uni -> resource.addProperty(ORG.unitOf, uni));
+            getUniversityResource(item.getUniversity()).forEach(uni -> addResource(model, resource, uni));
 
             addProperty(resource, SKOS.prefLabel, item.getIntitule());
             addProperty(resource, SKOS.altLabel, item.getIntituleAbrege());
+
             addProperty(resource, RDFS.label, item.getReferenceLaboratoire()); // TODO
             addProperty(resource, RDFS.label, item.getStructureRattachement()); // TODO
             addProperty(resource, RDFS.label, item.getRattachementExterne()); // TODO
@@ -92,6 +93,11 @@ public class RDFController {
         };
 
         generateRdf(Laboratoire.class, csvFilePath, csvLineToSkip, (Laboratoire lab) -> StringUtils.isNotEmpty(lab.getUniversity()), consumer, response);
+    }
+
+    private void addResource(Model model, Resource resource, String uni) {
+        if (StringUtils.isNotEmpty(uni))
+            resource.addProperty(ORG.unitOf, model.createResource(uni));
     }
 
     /**
