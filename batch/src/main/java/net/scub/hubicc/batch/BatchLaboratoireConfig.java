@@ -20,8 +20,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 
-@Configuration
-@EnableBatchProcessing
 public class BatchLaboratoireConfig {
     @Autowired
     private JobBuilderFactory jobs;

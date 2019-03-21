@@ -11,10 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -47,7 +44,7 @@ public abstract class AbstractController<T> {
         final Model model = ModelFactory.createDefaultModel();
 
         CsvBuilder
-                .readCsvFile(csvFilePath, csvLineToSkip, getClazz())
+                .readCsvFile(csvFilePath, getDelimiter(), csvLineToSkip, getClazz())
                 .stream()
                 .filter(predicateCsv)
                 .map(item -> new ImmutablePair(model, item))
@@ -59,6 +56,8 @@ public abstract class AbstractController<T> {
             e.printStackTrace();
         }
     }
+
+    public abstract Optional<Character> getDelimiter();
 
     protected void addProperty(Resource resource, Property label, String field) {
         if (StringUtils.isNotEmpty(field))

@@ -9,6 +9,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -32,7 +33,7 @@ public final class CsvBuilder {
      * @return an object list
      * @throws IOException exception
      */
-    public static <T> List<T> readCsvFile(final String path, final int lineToSkip, Class<T> clazz) throws IOException {
+    public static <T> List<T> readCsvFile(final String path, final Optional<Character> maybeDelimiter, final int lineToSkip, Class<T> clazz) throws IOException {
         final ClassPathResource classPathResource = new ClassPathResource(path);
 
         final Reader reader = Files.newBufferedReader(Paths.get(classPathResource.getURI()));
@@ -40,7 +41,7 @@ public final class CsvBuilder {
         final CsvToBean csvToBean = new CsvToBeanBuilder(reader)
                 .withType(clazz)
                 .withSkipLines(lineToSkip)
-                .withSeparator(';')
+                .withSeparator(maybeDelimiter.orElse(';'))
                 .withQuoteChar('"')
                 .withIgnoreLeadingWhiteSpace(true)
                 .build();

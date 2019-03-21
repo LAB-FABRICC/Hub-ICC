@@ -11,13 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/rdf/labs")
-public class RDFController extends AbstractController<Laboratoire> {
+public class RDFLabsController extends AbstractController<Laboratoire> {
+
+    @Override
+    public Optional<Character> getDelimiter() {
+        return Optional.of(';');
+    }
 
     @Override
     protected Class<Laboratoire> getClazz() {
@@ -45,7 +51,7 @@ public class RDFController extends AbstractController<Laboratoire> {
             final Model model = pair.left;
             final Laboratoire item = pair.right;
 
-            final String aboutUrl = "http://universite.poitiers.fr/";
+            final String aboutUrl = "http://universite.poitiers.fr/labs/";
             final Resource resource = model.createResource(aboutUrl + item.getId());
 
             // Identité
