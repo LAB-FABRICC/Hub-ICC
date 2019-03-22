@@ -3,34 +3,35 @@ package net.scub.hubicc.batch.model;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvCustomBindByPosition;
 import net.scub.hubicc.batch.tools.csv.BooleanConverter;
+import net.scub.hubicc.batch.tools.csv.StringConverter;
 
 public class Formation {
 
-    @CsvBindByPosition(position = 0)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 0)
     private String id;
 
-    @CsvBindByPosition(position = 1)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 1)
     private String university;
 
-    @CsvBindByPosition(position = 2)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 2)
     private String intitule;
 
-    @CsvBindByPosition(position = 3)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 3)
     private String niveau;
 
-    @CsvBindByPosition(position = 4)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 4)
     private String domaineDiplome;
 
-    @CsvBindByPosition(position = 5)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 5)
     private String mentionDiplome;
 
-    @CsvBindByPosition(position = 6)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 6)
     private String specialiteDiplome;
 
-    @CsvBindByPosition(position = 7)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 7)
     private String parcoursDiplome;
 
-    @CsvBindByPosition(position = 8)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 8)
     private String lieuFormation;
 
     @CsvCustomBindByPosition(position = 9, converter = BooleanConverter.class)
@@ -48,64 +49,64 @@ public class Formation {
     @CsvCustomBindByPosition(position = 13, converter = BooleanConverter.class)
     private Boolean voieRecherche;
 
-    @CsvBindByPosition(position = 14)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 14)
     private String typeDeStage;
 
-    @CsvBindByPosition(position = 15)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 15)
     private String dureeStage;
 
-    @CsvBindByPosition(position = 16)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 16)
     private String dateDebut;
 
-    @CsvBindByPosition(position = 17)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 17)
     private String dateFinObligatoire;
 
     @CsvCustomBindByPosition(position = 18, converter = BooleanConverter.class)
     private Boolean serviceStageEmploi;
 
-    @CsvBindByPosition(position = 19)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 19)
     private String siteInternetStageEmploi;
 
-    @CsvBindByPosition(position = 20)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 20)
     private String exempleSujetMemoire1;
 
-    @CsvBindByPosition(position = 21)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 21)
     private String exempleSujetMemoire2;
 
-    @CsvBindByPosition(position = 22)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 22)
     private String exempleSujetMemoire3;
 
-    @CsvBindByPosition(position = 23)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 23)
     private String responsablePedagogique;
 
-    @CsvBindByPosition(position = 24)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 24)
     private String courrielSecretariatFormation;
 
-    @CsvBindByPosition(position = 25)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 25)
     private String telephone;
 
-    @CsvBindByPosition(position = 26)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 26)
     private String adresse;
 
-    @CsvBindByPosition(position = 27)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 27)
     private String codePostal;
 
-    @CsvBindByPosition(position = 28)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 28)
     private String commune;
 
-    @CsvBindByPosition(position = 29)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 29)
     private String siteInternet;
 
-    @CsvBindByPosition(position = 30)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 30)
     private String rattachementLaboratoire1;
 
-    @CsvBindByPosition(position = 31)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 31)
     private String rattachementLaboratoire2;
 
-    @CsvBindByPosition(position = 32)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 32)
     private String rattachementLaboratoire3;
 
-    @CsvBindByPosition(position = 33)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 33)
     private String informationsComplementaires;
 
     public String getId() {

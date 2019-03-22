@@ -50,7 +50,7 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
             final Model model = pair.left;
             final BiblioCad item = pair.right;
 
-            final String aboutUrl = "http://universite.poitiers.fr/biblio/";
+            final String aboutUrl = "http://fabricc.univ-poitiers.fr/biblio/";
             final Resource resource = model.createResource(aboutUrl + item.getKey());
 
 

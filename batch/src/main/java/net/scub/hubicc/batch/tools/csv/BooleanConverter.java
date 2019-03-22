@@ -22,7 +22,7 @@ public class BooleanConverter extends AbstractBeanField<Boolean> {
         } else if (falseBooleans.contains(value)) {
             return false;
         } else {
-            System.out.println("not managed boolean value " + value);
+            System.out.println("not managed boolean value : " + value);
             return null;
         }
     }

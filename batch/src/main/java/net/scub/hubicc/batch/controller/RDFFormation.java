@@ -5,6 +5,7 @@ import net.scub.hubicc.batch.model.Formation;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
 import org.apache.jena.vocabulary.*;
@@ -55,7 +56,7 @@ public class RDFFormation extends AbstractRDF<Formation> {
             final Model model = pair.left;
             final Formation item = pair.right;
 
-            final String aboutUrl = "http://universite.poitiers.fr/formation/";
+            final String aboutUrl = "http://fabricc.univ-poitiers.fr/formation/";
             final Resource resource = model.createResource(aboutUrl + item.getId());
 
             getUniversityResource(item.getUniversity()).forEach(uni -> addResource(model, resource, ORG.unitOf, uni));

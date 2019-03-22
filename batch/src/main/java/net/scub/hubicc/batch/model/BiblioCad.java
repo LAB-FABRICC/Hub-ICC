@@ -1,183 +1,185 @@
 package net.scub.hubicc.batch.model;
 
 import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvCustomBindByPosition;
+import net.scub.hubicc.batch.tools.csv.StringConverter;
 
 public class BiblioCad {
 
 
-    @CsvBindByPosition(position = 0)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 0)
     private String key;
-    @CsvBindByPosition(position = 1)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 1)
     private String itemType;
-    @CsvBindByPosition(position = 2)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 2)
     private String publicationYear;
-    @CsvBindByPosition(position = 3)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 3)
     private String author;
-    @CsvBindByPosition(position = 4)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 4)
     private String title;
-    @CsvBindByPosition(position = 5)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 5)
     private String publicationTitle;
-    @CsvBindByPosition(position = 6)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 6)
     private String ISBN;
-    @CsvBindByPosition(position = 7)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 7)
     private String ISSN;
-    @CsvBindByPosition(position = 8)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 8)
     private String DOI;
-    @CsvBindByPosition(position = 9)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 9)
     private String url;
-    @CsvBindByPosition(position = 10)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 10)
     private String abstractNote;
-    @CsvBindByPosition(position = 11)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 11)
     private String date;
-    @CsvBindByPosition(position = 12)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 12)
     private String dateAdded;
-    @CsvBindByPosition(position = 13)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 13)
     private String dateModified;
-    @CsvBindByPosition(position = 14)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 14)
     private String accessDate;
-    @CsvBindByPosition(position = 15)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 15)
     private String pages;
-    @CsvBindByPosition(position = 16)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 16)
     private String numPages;
-    @CsvBindByPosition(position = 17)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 17)
     private String issue;
-    @CsvBindByPosition(position = 18)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 18)
     private String volume;
-    @CsvBindByPosition(position = 19)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 19)
     private String numberOfVolumes;
-    @CsvBindByPosition(position = 20)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 20)
     private String journalAbbreviation;
-    @CsvBindByPosition(position = 21)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 21)
     private String shortTitle;
-    @CsvBindByPosition(position = 22)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 22)
     private String series;
-    @CsvBindByPosition(position = 23)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 23)
     private String seriesNumber;
-    @CsvBindByPosition(position = 24)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 24)
     private String seriesText;
-    @CsvBindByPosition(position = 25)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 25)
     private String seriesTitle;
-    @CsvBindByPosition(position = 26)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 26)
     private String publisher;
-    @CsvBindByPosition(position = 27)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 27)
     private String place;
-    @CsvBindByPosition(position = 28)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 28)
     private String language;
-    @CsvBindByPosition(position = 29)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 29)
     private String rights;
-    @CsvBindByPosition(position = 30)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 30)
     private String type;
-    @CsvBindByPosition(position = 31)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 31)
     private String archive;
-    @CsvBindByPosition(position = 32)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 32)
     private String archiveLocation;
-    @CsvBindByPosition(position = 33)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 33)
     private String libraryCatalog;
-    @CsvBindByPosition(position = 34)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 34)
     private String callNumber;
-    @CsvBindByPosition(position = 35)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 35)
     private String extra;
-    @CsvBindByPosition(position = 36)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 36)
     private String notes;
-    @CsvBindByPosition(position = 37)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 37)
     private String fileAttachments;
-    @CsvBindByPosition(position = 38)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 38)
     private String linkAttachments;
-    @CsvBindByPosition(position = 39)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 39)
     private String manualTags;
-    @CsvBindByPosition(position = 40)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 40)
     private String automaticTags;
-    @CsvBindByPosition(position = 41)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 41)
     private String editor;
-    @CsvBindByPosition(position = 42)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 42)
     private String seriesEditor;
-    @CsvBindByPosition(position = 43)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 43)
     private String translator;
-    @CsvBindByPosition(position = 44)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 44)
     private String contributor;
-    @CsvBindByPosition(position = 45)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 45)
     private String attorneyAgent;
-    @CsvBindByPosition(position = 46)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 46)
     private String bookAuthor;
-    @CsvBindByPosition(position = 47)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 47)
     private String castMember;
-    @CsvBindByPosition(position = 48)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 48)
     private String commenter;
-    @CsvBindByPosition(position = 49)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 49)
     private String composer;
-    @CsvBindByPosition(position = 50)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 50)
     private String cosponsor;
-    @CsvBindByPosition(position = 51)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 51)
     private String counsel;
-    @CsvBindByPosition(position = 52)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 52)
     private String interviewer;
-    @CsvBindByPosition(position = 53)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 53)
     private String producer;
-    @CsvBindByPosition(position = 54)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 54)
     private String recipient;
-    @CsvBindByPosition(position = 55)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 55)
     private String reviewedAuthor;
-    @CsvBindByPosition(position = 56)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 56)
     private String scriptwriter;
-    @CsvBindByPosition(position = 57)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 57)
     private String wordsBy;
-    @CsvBindByPosition(position = 58)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 58)
     private String guest;
-    @CsvBindByPosition(position = 59)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 59)
     private String number;
-    @CsvBindByPosition(position = 60)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 60)
     private String edition;
-    @CsvBindByPosition(position = 61)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 61)
     private String runningTime;
-    @CsvBindByPosition(position = 62)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 62)
     private String scale;
-    @CsvBindByPosition(position = 63)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 63)
     private String medium;
-    @CsvBindByPosition(position = 64)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 64)
     private String artworkSize;
-    @CsvBindByPosition(position = 65)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 65)
     private String filingDate;
-    @CsvBindByPosition(position = 66)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 66)
     private String applicationNumber;
-    @CsvBindByPosition(position = 67)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 67)
     private String assignee;
-    @CsvBindByPosition(position = 68)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 68)
     private String issuingAuthority;
-    @CsvBindByPosition(position = 69)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 69)
     private String country;
-    @CsvBindByPosition(position = 70)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 70)
     private String meetingName;
-    @CsvBindByPosition(position = 71)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 71)
     private String conferenceName;
-    @CsvBindByPosition(position = 72)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 72)
     private String court;
-    @CsvBindByPosition(position = 73)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 73)
     private String references;
-    @CsvBindByPosition(position = 74)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 74)
     private String reporter;
-    @CsvBindByPosition(position = 75)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 75)
     private String legalStatus;
-    @CsvBindByPosition(position = 76)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 76)
     private String priorityNumbers;
-    @CsvBindByPosition(position = 77)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 77)
     private String programmingLanguage;
-    @CsvBindByPosition(position = 78)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 78)
     private String version;
-    @CsvBindByPosition(position = 79)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 79)
     private String system;
-    @CsvBindByPosition(position = 80)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 80)
     private String code;
-    @CsvBindByPosition(position = 81)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 81)
     private String codeNumber;
-    @CsvBindByPosition(position = 82)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 82)
     private String section;
-    @CsvBindByPosition(position = 83)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 83)
     private String session;
-    @CsvBindByPosition(position = 84)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 84)
     private String committee;
-    @CsvBindByPosition(position = 85)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 85)
     private String history;
-    @CsvBindByPosition(position = 86)
+    @CsvCustomBindByPosition(converter = StringConverter.class, position = 86)
     private String legislativeBody;
 
     public String getKey() {

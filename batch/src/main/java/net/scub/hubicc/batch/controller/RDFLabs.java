@@ -4,16 +4,16 @@ import net.scub.hubicc.batch.model.Laboratoire;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
-import org.apache.jena.vocabulary.*;
+import org.apache.jena.vocabulary.DC_11;
+import org.apache.jena.vocabulary.ORG;
+import org.apache.jena.vocabulary.SKOS;
+import org.apache.jena.vocabulary.VCARD4;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 @Component
 public class RDFLabs extends AbstractRDF<Laboratoire> {
@@ -51,11 +51,14 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
     @Override
     public Consumer<ImmutablePair<Model, Laboratoire>> convertItemToRDF() {
         return (ImmutablePair<Model, Laboratoire> pair) -> {
-            final Model model = pair.left;
-            final Laboratoire item = pair.right;
+            var model = pair.left;
+            var item = pair.right;
 
-            final String aboutUrl = "http://universite.poitiers.fr/labs/";
-            final Resource resource = model.createResource(aboutUrl + item.getId());
+            var propertyNombreChercheurs = unknowProperty(model, "nombreChercheurs");
+            var propertyAssociationCnrs = unknowProperty(model, "associationCnrs");
+
+            var aboutUrl = "http://fabricc.univ-poitiers.fr/labs/";
+            var resource = model.createResource(aboutUrl + item.getId());
 
             // Identité
             addProperty(resource, ORG.classification, item.getChampDeRecherche());
@@ -71,8 +74,8 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
             addProperty(resource, ORG.unitOf, item.getRattachementExterne());
 
             //Recherche
-            addProperty(resource, RDFS.label, item.getNombreChercheurs()); // TODO
-            addProperty(resource, RDFS.label, item.getAssociationCnrs()); // TODO
+            addProperty(resource, propertyNombreChercheurs, item.getNombreChercheurs()); // TODO
+            addProperty(resource, propertyAssociationCnrs, item.getAssociationCnrs()); // TODO
 
             addProperty(resource, DC_11.subject, item.getAxeRecherche1());
             addProperty(resource, DC_11.subject, item.getAxeRecherche2());
@@ -92,8 +95,12 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
 
             addProperty(resource, ORG.siteAddress, formatAddress(item.getAdresse(), item.getCodePostal(), item.getCommune()));
 
-            addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France");
+            addProperty(resource, VCARD4.street_address, item.getAdresse());
+            addProperty(resource, VCARD4.postal_code, item.getCodePostal());
+            addProperty(resource, VCARD4.region, item.getCommune());
 
+            addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France");
         };
     }
+
 }

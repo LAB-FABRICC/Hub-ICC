@@ -3,7 +3,6 @@ package net.scub.hubicc.batch.controller;
 import net.scub.hubicc.batch.tools.csv.CsvBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.jena.datatypes.RDFDatatype;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -14,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -27,17 +27,33 @@ public abstract class AbstractRDF<T> {
      */
     public AbstractRDF() {
         this.mapUniversity = new HashMap<>();
-        mapUniversity.put("poitiers", List.of("http://fr.dbpedia.org/resource/University_of_Poitiers"));
-        mapUniversity.put("poitiers et limoges", List.of("http://fr.dbpedia.org/resource/University_of_Poitiers", "http://dbpedia.org/resource/University_of_Limoges"));
+        final String poitiers = "http://fr.dbpedia.org/resource/University_of_Poitiers";
+        final String laRochelle = "http://dbpedia.org/resource/University_of_La_Rochelle";
+
+        mapUniversity.put("poitiers", List.of(poitiers));
+        mapUniversity.put("poitiers et limoges", List.of(poitiers, "http://dbpedia.org/resource/University_of_Limoges"));
         mapUniversity.put("bordeaux montaigne", List.of("http://dbpedia.org/resource/Bordeaux_Montaigne_University"));
         mapUniversity.put("bordeaux", List.of("http://dbpedia.org/resource/University_of_Bordeaux_1"));
         mapUniversity.put("limoges", List.of("http://dbpedia.org/resource/University_of_Limoges"));
-        mapUniversity.put("la rochelle", List.of("http://dbpedia.org/resource/University_of_La_Rochelle"));
+        mapUniversity.put("la rochelle", List.of(laRochelle));
+
+//        mapUniversity.put("cnam, cfa poitiers", List.of(""));
+//        mapUniversity.put("cnam, gobelins", List.of(""));
+//        mapUniversity.put("cnam", List.of(""));
+        mapUniversity.put("la rochelle, poitiers, cnam", List.of(laRochelle, poitiers));
+//        mapUniversity.put("pau et pays de l'adour", List.of(""));
+
 
     }
 
     protected String formatAddress(String adresse, String codePostal, String commune) {
-        return List.of(adresse, codePostal, commune)
+        final Function<String, String> toString = (String item) -> Optional.ofNullable(item).orElse("");
+
+        return List.of(
+                toString.apply(adresse),
+                toString.apply(codePostal),
+                toString.apply(commune)
+        )
                 .stream()
                 .filter(StringUtils::isNoneEmpty)
                 .collect(Collectors.joining(" "));
@@ -50,29 +66,35 @@ public abstract class AbstractRDF<T> {
     }
 
     private void generateRdf(final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer) throws IOException {
-        final Model model = ModelFactory.createDefaultModel();
+        var model = ModelFactory.createDefaultModel();
 
         CsvBuilder
                 .readCsvFile(csvFilePath, getDelimiter(), csvLineToSkip, getClazz())
                 .stream()
                 .filter(predicateCsv)
                 .map(item -> new ImmutablePair(model, item))
-                .forEach(pair -> consumer.accept(pair));
+                .forEach(consumer::accept);
 
-            model.write(new FileWriter(getRDFFileName() + ".owl"));
+        model.write(new FileWriter(getRDFFileName() + ".owl"));
     }
 
     protected abstract String getRDFFileName();
 
     public abstract Optional<Character> getDelimiter();
 
-    protected void addProperty(Resource resource, Property label, String field) {
+    protected void addProperty(Resource resource, Property property, String field) {
         if (StringUtils.isNotEmpty(field))
-            resource.addProperty(label, field.trim());
+            resource.addProperty(property, field.trim());
     }
-    protected void addProperty(Resource resource, Property label, Boolean field) {
+
+    protected void addProperty(Resource resource, Property property, Boolean field) {
         if (field != null)
-            resource.addProperty(label, field.toString(), XSDDatatype.XSDboolean);
+            resource.addProperty(property, field.toString(), XSDDatatype.XSDboolean);
+    }
+
+    protected void addProperty(Resource resource, Property property, Integer field) {
+        if (field != null)
+            resource.addProperty(property, field.toString(), XSDDatatype.XSDinteger);
     }
 
 
@@ -86,14 +108,18 @@ public abstract class AbstractRDF<T> {
         if (mapUniversity.containsKey(tmpUniversity)) {
             return mapUniversity.get(tmpUniversity);
         } else {
-            System.out.println("not managed university " + tmpUniversity);
+            System.out.println("not managed university : " + tmpUniversity);
             return new ArrayList<>();
         }
     }
 
+    public Property unknowProperty(Model model, String propertyName) {
+        return model.createProperty("http://unknow-property.fr#" + propertyName);
+    }
+
     public void export() throws IOException {
-        final String csvFilePath = getCsvFilePath();
-        final int csvLineToSkip = getCsvLineToSkip();
+        var csvFilePath = getCsvFilePath();
+        var csvLineToSkip = getCsvLineToSkip();
 
         generateRdf(csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF());
     }
