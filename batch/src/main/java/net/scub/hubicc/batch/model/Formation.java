@@ -1,46 +1,382 @@
 package net.scub.hubicc.batch.model;
 
+import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvCustomBindByPosition;
+import net.scub.hubicc.batch.tools.csv.BooleanConverter;
+
 public class Formation {
 
+    @CsvBindByPosition(position = 0)
     private String id;
 
+    @CsvBindByPosition(position = 1)
     private String university;
 
+    @CsvBindByPosition(position = 2)
     private String intitule;
 
+    @CsvBindByPosition(position = 3)
     private String niveau;
 
+    @CsvBindByPosition(position = 4)
     private String domaineDiplome;
 
+    @CsvBindByPosition(position = 5)
     private String mentionDiplome;
 
+    @CsvBindByPosition(position = 6)
     private String specialiteDiplome;
 
+    @CsvBindByPosition(position = 7)
     private String parcoursDiplome;
 
+    @CsvBindByPosition(position = 8)
     private String lieuFormation;
 
+    @CsvCustomBindByPosition(position = 9, converter = BooleanConverter.class)
     private Boolean formationInitiale;
 
+    @CsvCustomBindByPosition(position = 10, converter = BooleanConverter.class)
     private Boolean formationContinue;
 
+    @CsvCustomBindByPosition(position = 11, converter = BooleanConverter.class)
     private Boolean contratApprentissage;
 
+    @CsvCustomBindByPosition(position = 12, converter = BooleanConverter.class)
     private Boolean contratProfessionnalisation;
 
+    @CsvCustomBindByPosition(position = 13, converter = BooleanConverter.class)
     private Boolean voieRecherche;
 
+    @CsvBindByPosition(position = 14)
     private String typeDeStage;
 
+    @CsvBindByPosition(position = 15)
     private String dureeStage;
 
+    @CsvBindByPosition(position = 16)
     private String dateDebut;
 
+    @CsvBindByPosition(position = 17)
     private String dateFinObligatoire;
 
+    @CsvCustomBindByPosition(position = 18, converter = BooleanConverter.class)
     private Boolean serviceStageEmploi;
 
+    @CsvBindByPosition(position = 19)
     private String siteInternetStageEmploi;
 
+    @CsvBindByPosition(position = 20)
     private String exempleSujetMemoire1;
+
+    @CsvBindByPosition(position = 21)
+    private String exempleSujetMemoire2;
+
+    @CsvBindByPosition(position = 22)
+    private String exempleSujetMemoire3;
+
+    @CsvBindByPosition(position = 23)
+    private String responsablePedagogique;
+
+    @CsvBindByPosition(position = 24)
+    private String courrielSecretariatFormation;
+
+    @CsvBindByPosition(position = 25)
+    private String telephone;
+
+    @CsvBindByPosition(position = 26)
+    private String adresse;
+
+    @CsvBindByPosition(position = 27)
+    private String codePostal;
+
+    @CsvBindByPosition(position = 28)
+    private String commune;
+
+    @CsvBindByPosition(position = 29)
+    private String siteInternet;
+
+    @CsvBindByPosition(position = 30)
+    private String rattachementLaboratoire1;
+
+    @CsvBindByPosition(position = 31)
+    private String rattachementLaboratoire2;
+
+    @CsvBindByPosition(position = 32)
+    private String rattachementLaboratoire3;
+
+    @CsvBindByPosition(position = 33)
+    private String informationsComplementaires;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+
+    public String getIntitule() {
+        return intitule;
+    }
+
+    public void setIntitule(String intitule) {
+        this.intitule = intitule;
+    }
+
+    public String getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(String niveau) {
+        this.niveau = niveau;
+    }
+
+    public String getDomaineDiplome() {
+        return domaineDiplome;
+    }
+
+    public void setDomaineDiplome(String domaineDiplome) {
+        this.domaineDiplome = domaineDiplome;
+    }
+
+    public String getMentionDiplome() {
+        return mentionDiplome;
+    }
+
+    public void setMentionDiplome(String mentionDiplome) {
+        this.mentionDiplome = mentionDiplome;
+    }
+
+    public String getSpecialiteDiplome() {
+        return specialiteDiplome;
+    }
+
+    public void setSpecialiteDiplome(String specialiteDiplome) {
+        this.specialiteDiplome = specialiteDiplome;
+    }
+
+    public String getParcoursDiplome() {
+        return parcoursDiplome;
+    }
+
+    public void setParcoursDiplome(String parcoursDiplome) {
+        this.parcoursDiplome = parcoursDiplome;
+    }
+
+    public String getLieuFormation() {
+        return lieuFormation;
+    }
+
+    public void setLieuFormation(String lieuFormation) {
+        this.lieuFormation = lieuFormation;
+    }
+
+    public Boolean getFormationInitiale() {
+        return formationInitiale;
+    }
+
+    public void setFormationInitiale(Boolean formationInitiale) {
+        this.formationInitiale = formationInitiale;
+    }
+
+    public Boolean getFormationContinue() {
+        return formationContinue;
+    }
+
+    public void setFormationContinue(Boolean formationContinue) {
+        this.formationContinue = formationContinue;
+    }
+
+    public Boolean getContratApprentissage() {
+        return contratApprentissage;
+    }
+
+    public void setContratApprentissage(Boolean contratApprentissage) {
+        this.contratApprentissage = contratApprentissage;
+    }
+
+    public Boolean getContratProfessionnalisation() {
+        return contratProfessionnalisation;
+    }
+
+    public void setContratProfessionnalisation(Boolean contratProfessionnalisation) {
+        this.contratProfessionnalisation = contratProfessionnalisation;
+    }
+
+    public Boolean getVoieRecherche() {
+        return voieRecherche;
+    }
+
+    public void setVoieRecherche(Boolean voieRecherche) {
+        this.voieRecherche = voieRecherche;
+    }
+
+    public String getTypeDeStage() {
+        return typeDeStage;
+    }
+
+    public void setTypeDeStage(String typeDeStage) {
+        this.typeDeStage = typeDeStage;
+    }
+
+    public String getDureeStage() {
+        return dureeStage;
+    }
+
+    public void setDureeStage(String dureeStage) {
+        this.dureeStage = dureeStage;
+    }
+
+    public String getDateDebut() {
+        return dateDebut;
+    }
+
+    public void setDateDebut(String dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+    public String getDateFinObligatoire() {
+        return dateFinObligatoire;
+    }
+
+    public void setDateFinObligatoire(String dateFinObligatoire) {
+        this.dateFinObligatoire = dateFinObligatoire;
+    }
+
+    public Boolean getServiceStageEmploi() {
+        return serviceStageEmploi;
+    }
+
+    public void setServiceStageEmploi(Boolean serviceStageEmploi) {
+        this.serviceStageEmploi = serviceStageEmploi;
+    }
+
+    public String getSiteInternetStageEmploi() {
+        return siteInternetStageEmploi;
+    }
+
+    public void setSiteInternetStageEmploi(String siteInternetStageEmploi) {
+        this.siteInternetStageEmploi = siteInternetStageEmploi;
+    }
+
+    public String getExempleSujetMemoire1() {
+        return exempleSujetMemoire1;
+    }
+
+    public void setExempleSujetMemoire1(String exempleSujetMemoire1) {
+        this.exempleSujetMemoire1 = exempleSujetMemoire1;
+    }
+
+    public String getExempleSujetMemoire2() {
+        return exempleSujetMemoire2;
+    }
+
+    public void setExempleSujetMemoire2(String exempleSujetMemoire2) {
+        this.exempleSujetMemoire2 = exempleSujetMemoire2;
+    }
+
+    public String getExempleSujetMemoire3() {
+        return exempleSujetMemoire3;
+    }
+
+    public void setExempleSujetMemoire3(String exempleSujetMemoire3) {
+        this.exempleSujetMemoire3 = exempleSujetMemoire3;
+    }
+
+    public String getResponsablePedagogique() {
+        return responsablePedagogique;
+    }
+
+    public void setResponsablePedagogique(String responsablePedagogique) {
+        this.responsablePedagogique = responsablePedagogique;
+    }
+
+    public String getCourrielSecretariatFormation() {
+        return courrielSecretariatFormation;
+    }
+
+    public void setCourrielSecretariatFormation(String courrielSecretariatFormation) {
+        this.courrielSecretariatFormation = courrielSecretariatFormation;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(String codePostal) {
+        this.codePostal = codePostal;
+    }
+
+    public String getCommune() {
+        return commune;
+    }
+
+    public void setCommune(String commune) {
+        this.commune = commune;
+    }
+
+    public String getSiteInternet() {
+        return siteInternet;
+    }
+
+    public void setSiteInternet(String siteInternet) {
+        this.siteInternet = siteInternet;
+    }
+
+    public String getRattachementLaboratoire1() {
+        return rattachementLaboratoire1;
+    }
+
+    public void setRattachementLaboratoire1(String rattachementLaboratoire1) {
+        this.rattachementLaboratoire1 = rattachementLaboratoire1;
+    }
+
+    public String getRattachementLaboratoire2() {
+        return rattachementLaboratoire2;
+    }
+
+    public void setRattachementLaboratoire2(String rattachementLaboratoire2) {
+        this.rattachementLaboratoire2 = rattachementLaboratoire2;
+    }
+
+    public String getRattachementLaboratoire3() {
+        return rattachementLaboratoire3;
+    }
+
+    public void setRattachementLaboratoire3(String rattachementLaboratoire3) {
+        this.rattachementLaboratoire3 = rattachementLaboratoire3;
+    }
+
+    public String getInformationsComplementaires() {
+        return informationsComplementaires;
+    }
+
+    public void setInformationsComplementaires(String informationsComplementaires) {
+        this.informationsComplementaires = informationsComplementaires;
+    }
 }

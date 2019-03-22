@@ -90,13 +90,7 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
             addProperty(resource, VCARD4.email, item.getCourrielSecretariat());
             addProperty(resource, VCARD4.tel, item.getTelephone());
 
-            final String address = List.of(item.getAdresse(), item.getCodePostal(), item.getCommune())
-                    .stream()
-                    .filter(StringUtils::isNoneEmpty)
-                    .collect(Collectors.joining(" "));
-
-            addProperty(resource, ORG.siteAddress, address);
-
+            addProperty(resource, ORG.siteAddress, formatAddress(item.getAdresse(), item.getCodePostal(), item.getCommune()));
 
             addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France");
 

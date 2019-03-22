@@ -3,6 +3,8 @@ package net.scub.hubicc.batch.controller;
 import net.scub.hubicc.batch.tools.csv.CsvBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.jena.datatypes.RDFDatatype;
+import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
@@ -13,6 +15,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public abstract class AbstractRDF<T> {
 
@@ -31,6 +34,13 @@ public abstract class AbstractRDF<T> {
         mapUniversity.put("limoges", List.of("http://dbpedia.org/resource/University_of_Limoges"));
         mapUniversity.put("la rochelle", List.of("http://dbpedia.org/resource/University_of_La_Rochelle"));
 
+    }
+
+    protected String formatAddress(String adresse, String codePostal, String commune) {
+        return List.of(adresse, codePostal, commune)
+                .stream()
+                .filter(StringUtils::isNoneEmpty)
+                .collect(Collectors.joining(" "));
     }
 
 
@@ -60,6 +70,10 @@ public abstract class AbstractRDF<T> {
         if (StringUtils.isNotEmpty(field))
             resource.addProperty(label, field.trim());
     }
+    protected void addProperty(Resource resource, Property label, Boolean field) {
+        if (field != null)
+            resource.addProperty(label, field.toString(), XSDDatatype.XSDboolean);
+    }
 
 
     protected List<String> getUniversityResource(String university) {
@@ -72,7 +86,7 @@ public abstract class AbstractRDF<T> {
         if (mapUniversity.containsKey(tmpUniversity)) {
             return mapUniversity.get(tmpUniversity);
         } else {
-            System.out.println(tmpUniversity);
+            System.out.println("not managed university " + tmpUniversity);
             return new ArrayList<>();
         }
     }
