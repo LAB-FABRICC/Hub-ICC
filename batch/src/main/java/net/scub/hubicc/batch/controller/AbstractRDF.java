@@ -7,15 +7,14 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.servlet.http.HttpServletResponse;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public abstract class AbstractController<T> {
+public abstract class AbstractRDF<T> {
 
 
     private final Map<String, List<String>> mapUniversity;
@@ -23,7 +22,7 @@ public abstract class AbstractController<T> {
     /**
      * Constructor.
      */
-    public AbstractController() {
+    public AbstractRDF() {
         this.mapUniversity = new HashMap<>();
         mapUniversity.put("poitiers", List.of("http://fr.dbpedia.org/resource/University_of_Poitiers"));
         mapUniversity.put("poitiers et limoges", List.of("http://fr.dbpedia.org/resource/University_of_Poitiers", "http://dbpedia.org/resource/University_of_Limoges"));
@@ -40,7 +39,7 @@ public abstract class AbstractController<T> {
             resource.addProperty(property, model.createResource(uni));
     }
 
-    private void generateRdf(final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer, final HttpServletResponse response) throws IOException {
+    private void generateRdf(final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer) throws IOException {
         final Model model = ModelFactory.createDefaultModel();
 
         CsvBuilder
@@ -50,12 +49,10 @@ public abstract class AbstractController<T> {
                 .map(item -> new ImmutablePair(model, item))
                 .forEach(pair -> consumer.accept(pair));
 
-        try {
-            model.write(response.getWriter());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            model.write(new FileWriter(getRDFFileName() + ".owl"));
     }
+
+    protected abstract String getRDFFileName();
 
     public abstract Optional<Character> getDelimiter();
 
@@ -80,13 +77,11 @@ public abstract class AbstractController<T> {
         }
     }
 
-
-    @GetMapping("/_export")
-    public void laboratory(final HttpServletResponse response) throws IOException {
+    public void export() throws IOException {
         final String csvFilePath = getCsvFilePath();
         final int csvLineToSkip = getCsvLineToSkip();
 
-        generateRdf(csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF(), response);
+        generateRdf(csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF());
     }
 
 

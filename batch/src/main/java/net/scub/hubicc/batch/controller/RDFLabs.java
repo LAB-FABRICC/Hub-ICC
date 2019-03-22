@@ -7,8 +7,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
 import org.apache.jena.vocabulary.*;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +15,13 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-@RestController
-@RequestMapping("/rdf/labs")
-public class RDFLabsController extends AbstractController<Laboratoire> {
+@Component
+public class RDFLabs extends AbstractRDF<Laboratoire> {
+
+    @Override
+    protected String getRDFFileName() {
+        return "generatedOwl/rdf-labs";
+    }
 
     @Override
     public Optional<Character> getDelimiter() {
