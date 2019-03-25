@@ -1,7 +1,10 @@
 package net.scub.hubicc.batch.model;
 
 import com.opencsv.bean.CsvCustomBindByPosition;
+import net.scub.hubicc.batch.tools.csv.converter.DateYearConverter;
 import net.scub.hubicc.batch.tools.csv.converter.StringConverter;
+
+import java.util.Date;
 
 public class BiblioCad {
 
@@ -10,8 +13,8 @@ public class BiblioCad {
     private String key;
     @CsvCustomBindByPosition(converter = StringConverter.class, position = 1)
     private String itemType;
-    @CsvCustomBindByPosition(converter = StringConverter.class, position = 2)
-    private String publicationYear;
+    @CsvCustomBindByPosition(converter = DateYearConverter.class, position = 2)
+    private Date publicationYear;
     @CsvCustomBindByPosition(converter = StringConverter.class, position = 3)
     private String author;
     @CsvCustomBindByPosition(converter = StringConverter.class, position = 4)
@@ -197,11 +200,11 @@ public class BiblioCad {
         this.itemType = itemType;
     }
 
-    public String getPublicationYear() {
+    public Date getPublicationYear() {
         return publicationYear;
     }
 
-    public void setPublicationYear(String publicationYear) {
+    public void setPublicationYear(Date publicationYear) {
         this.publicationYear = publicationYear;
     }
 

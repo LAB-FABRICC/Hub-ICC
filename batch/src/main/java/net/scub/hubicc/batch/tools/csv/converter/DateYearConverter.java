@@ -1,16 +1,13 @@
 package net.scub.hubicc.batch.tools.csv.converter;
 
 import com.opencsv.bean.AbstractBeanField;
-import com.opencsv.exceptions.CsvConstraintViolationException;
-import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
-public class DateConverter extends AbstractBeanField<Date> {
+public class DateYearConverter extends AbstractBeanField<Date> {
 
     @Override
     protected Object convert(String value) {
@@ -21,9 +18,9 @@ public class DateConverter extends AbstractBeanField<Date> {
         value = value.trim().toLowerCase();
 
         try {
-            return new SimpleDateFormat("dd MMMM").parse(value);
+            return new SimpleDateFormat("YYYY").parse(value);
         } catch (ParseException e) {
-            System.out.println("unsupported date with pattern dd MMMM : " + value);
+            System.out.println("unsupported date with pattern YYYY : " + value);
         }
 
         return null;

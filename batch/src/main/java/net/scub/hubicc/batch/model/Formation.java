@@ -2,7 +2,7 @@ package net.scub.hubicc.batch.model;
 
 import com.opencsv.bean.CsvCustomBindByPosition;
 import net.scub.hubicc.batch.tools.csv.converter.BooleanConverter;
-import net.scub.hubicc.batch.tools.csv.converter.DateConverter;
+import net.scub.hubicc.batch.tools.csv.converter.DateDayMonthConverter;
 import net.scub.hubicc.batch.tools.csv.converter.StringConverter;
 
 import java.util.Date;
@@ -57,10 +57,10 @@ public class Formation {
     @CsvCustomBindByPosition(converter = StringConverter.class, position = 15)
     private String dureeStage;
 
-    @CsvCustomBindByPosition(converter = DateConverter.class, position = 16)
+    @CsvCustomBindByPosition(converter = DateDayMonthConverter.class, position = 16)
     private Date dateDebut;
 
-    @CsvCustomBindByPosition(converter = DateConverter.class, position = 17)
+    @CsvCustomBindByPosition(converter = DateDayMonthConverter.class, position = 17)
     private Date dateFinObligatoire;
 
     @CsvCustomBindByPosition(position = 18, converter = BooleanConverter.class)

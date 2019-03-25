@@ -40,3 +40,5 @@ docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/
 ```bash
 docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn spring-boot:run
 ```
+
+La création des fichiers owl se fait au démarrage du projet. Ils sont générés dans le répertoire à la racine `generatedOwl`
