@@ -1,9 +1,11 @@
 package net.scub.hubicc.batch.model;
 
-import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvCustomBindByPosition;
-import net.scub.hubicc.batch.tools.csv.BooleanConverter;
-import net.scub.hubicc.batch.tools.csv.StringConverter;
+import net.scub.hubicc.batch.tools.csv.converter.BooleanConverter;
+import net.scub.hubicc.batch.tools.csv.converter.DateConverter;
+import net.scub.hubicc.batch.tools.csv.converter.StringConverter;
+
+import java.util.Date;
 
 public class Formation {
 
@@ -55,11 +57,11 @@ public class Formation {
     @CsvCustomBindByPosition(converter = StringConverter.class, position = 15)
     private String dureeStage;
 
-    @CsvCustomBindByPosition(converter = StringConverter.class, position = 16)
-    private String dateDebut;
+    @CsvCustomBindByPosition(converter = DateConverter.class, position = 16)
+    private Date dateDebut;
 
-    @CsvCustomBindByPosition(converter = StringConverter.class, position = 17)
-    private String dateFinObligatoire;
+    @CsvCustomBindByPosition(converter = DateConverter.class, position = 17)
+    private Date dateFinObligatoire;
 
     @CsvCustomBindByPosition(position = 18, converter = BooleanConverter.class)
     private Boolean serviceStageEmploi;
@@ -237,19 +239,19 @@ public class Formation {
         this.dureeStage = dureeStage;
     }
 
-    public String getDateDebut() {
+    public Date getDateDebut() {
         return dateDebut;
     }
 
-    public void setDateDebut(String dateDebut) {
+    public void setDateDebut(Date dateDebut) {
         this.dateDebut = dateDebut;
     }
 
-    public String getDateFinObligatoire() {
+    public Date getDateFinObligatoire() {
         return dateFinObligatoire;
     }
 
-    public void setDateFinObligatoire(String dateFinObligatoire) {
+    public void setDateFinObligatoire(Date dateFinObligatoire) {
         this.dateFinObligatoire = dateFinObligatoire;
     }
 

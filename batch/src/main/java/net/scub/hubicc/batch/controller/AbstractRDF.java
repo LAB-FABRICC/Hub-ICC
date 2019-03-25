@@ -21,11 +21,23 @@ public abstract class AbstractRDF<T> {
 
 
     private final Map<String, List<String>> mapUniversity;
+    private final Map<String, List<String>> mapCity;
 
     /**
      * Constructor.
      */
     public AbstractRDF() {
+        this.mapCity = new HashMap<>();
+
+        this.mapCity.put("angoulême", List.of("http://dbpedia.org/resource/Angoulême"));
+        this.mapCity.put("poitiers", List.of("http://dbpedia.org/resource/Poitiers"));
+        this.mapCity.put("paris", List.of("http://dbpedia.org/resource/Paris"));
+        this.mapCity.put("la rochelle", List.of("http://dbpedia.org/resource/La_Rochelle"));
+        this.mapCity.put("limoges", List.of("http://dbpedia.org/resource/Limoges"));
+        this.mapCity.put("bordeaux", List.of("http://dbpedia.org/resource/Bordeaux"));
+        this.mapCity.put("pessac", List.of("http://dbpedia.org/resource/Pessac"));
+        this.mapCity.put("pau", List.of("http://dbpedia.org/resource/Pau"));
+        
         this.mapUniversity = new HashMap<>();
         final String poitiers = "http://fr.dbpedia.org/resource/University_of_Poitiers";
         final String laRochelle = "http://dbpedia.org/resource/University_of_La_Rochelle";
@@ -44,6 +56,10 @@ public abstract class AbstractRDF<T> {
 //        mapUniversity.put("pau et pays de l'adour", List.of(""));
 
 
+    }
+
+    protected String getICCNamespace() {
+        return "http://fabricc.univ-poitiers.fr/";
     }
 
     protected String formatAddress(String adresse, String codePostal, String commune) {
@@ -97,24 +113,37 @@ public abstract class AbstractRDF<T> {
             resource.addProperty(property, field.toString(), XSDDatatype.XSDinteger);
     }
 
+    protected void addProperty(Resource resource, Property property, Date field) {
+        if (field != null)
+            resource.addProperty(property, field.toString(), XSDDatatype.XSDdate);
+    }
+
 
     protected List<String> getUniversityResource(String university) {
-        if (StringUtils.isEmpty(university)) {
+        return getValueFromMap(university, mapUniversity, "not managed university : ");
+    }
+
+    protected List<String> getCityResource(String city) {
+        return getValueFromMap(city, mapCity, "not managed city : ");
+    }
+
+    private List<String> getValueFromMap(String city, Map<String, List<String>> mapCity, String s) {
+        if (StringUtils.isEmpty(city)) {
             return new ArrayList<>();
         }
 
-        final String tmpUniversity = university.trim().toLowerCase();
+        final String tmpCity = city.trim().toLowerCase();
 
-        if (mapUniversity.containsKey(tmpUniversity)) {
-            return mapUniversity.get(tmpUniversity);
+        if (mapCity.containsKey(tmpCity)) {
+            return mapCity.get(tmpCity);
         } else {
-            System.out.println("not managed university : " + tmpUniversity);
+            System.out.println(s + tmpCity);
             return new ArrayList<>();
         }
     }
 
     public Property unknowProperty(Model model, String propertyName) {
-        return model.createProperty("http://unknow-property.fr#" + propertyName);
+        return model.createProperty(getICCNamespace() + "#" + propertyName);
     }
 
     public void export() throws IOException {

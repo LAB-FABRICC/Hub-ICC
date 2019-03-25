@@ -57,7 +57,7 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
             var propertyNombreChercheurs = unknowProperty(model, "nombreChercheurs");
             var propertyAssociationCnrs = unknowProperty(model, "associationCnrs");
 
-            var aboutUrl = "http://fabricc.univ-poitiers.fr/labs/";
+            var aboutUrl = getICCNamespace() + "labs/";
             var resource = model.createResource(aboutUrl + item.getId());
 
             // Identité

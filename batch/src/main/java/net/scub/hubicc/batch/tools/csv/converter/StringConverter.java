@@ -1,4 +1,4 @@
-package net.scub.hubicc.batch.tools.csv;
+package net.scub.hubicc.batch.tools.csv.converter;
 
 import com.opencsv.bean.AbstractBeanField;
 import org.apache.commons.lang3.StringUtils;

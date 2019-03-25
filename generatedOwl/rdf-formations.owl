@@ -1,935 +1,1281 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:j.0="http://www.w3.org/2006/vcard/ns#"
-    xmlns:j.1="http://www.w3.org/2004/02/skos/core#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:j.2="http://www.w3.org/ns/org#"
-    xmlns:j.3="http://xmlns.com/foaf/0.1/">
+    xmlns:j.1="http://fabricc.univ-poitiers.fr/#"
+    xmlns:j.2="http://www.w3.org/2004/02/skos/core#"
+    xmlns:j.3="http://www.w3.org/ns/org#"
+    xmlns:j.4="http://xmlns.com/foaf/0.1/">
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F41">
-    <rdfs:label>Pessac</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Droit Privé</rdfs:label>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:classification>Droit Privé</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
+    <j.3:classification>Droit et Administration des Etablissements Culturels</j.3:classification>
+    <j.0:postal-code>33608</j.0:postal-code>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:classification>Master 2</j.3:classification>
     <j.0:url>http://www.u-bordeaux.fr/formation/2015/PRMMDPRI0_233/master-mention-droit-prive-m2-specialite-professionnelle-droit-et-administration-des-etablissements-culturels</j.0:url>
-    <j.3:name>Xavier Daverat</j.3:name>
-    <rdfs:label>Droit de la Culture et des Créations Intellectuelles</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.4:name>Xavier Daverat</j.4:name>
     <j.0:email>xavier.daverat@u-bordeaux.fr</j.0:email>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
     <j.0:tel>05 56 84 85 10</j.0:tel>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Droit et Administration des Etablissements Culturels</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <j.2:siteAddress>16 Avenue Léon Duguit 33608 33608</j.2:siteAddress>
-    <j.1:prefLabel>Droit et Science Politique</j.1:prefLabel>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:classification>Droit de la Culture et des Créations Intellectuelles</j.3:classification>
+    <j.0:region>33608</j.0:region>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:siteAddress>16 Avenue Léon Duguit 33608 33608</j.3:siteAddress>
+    <j.0:street-address>16 Avenue Léon Duguit</j.0:street-address>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Pessac"/>
+    <j.2:prefLabel>Droit et Science Politique</j.2:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F31">
-    <rdfs:label>Humanités Numériques</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.0:region>Pessac</j.0:region>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux"/>
     <j.0:url>http://www.u-bordeaux-montaigne.fr/fr/formations/offre-de-formation-2016-2020/master-XB/information-communication-et-mediation-des-sciences-SCINFO.9/master-conception-de-projet-numerique-et-multimedia-program-msm16-216.html#admission</j.0:url>
-    <rdfs:label>Conception de projet numerique et multimédia</rdfs:label>
-    <j.2:unitOf>MICA 4426</j.2:unitOf>
-    <rdfs:label>OUI</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf>MICA 4426</j.3:unitOf>
+    <j.0:postal-code>33607</j.0:postal-code>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:typeDeStage>OUI</j.1:typeDeStage>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:siteAddress>Institut des Sciences de la Communication et de l'Information. Domaine Universitaire 33607 Pessac</j.2:siteAddress>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.3:classification>Humanités Numériques</j.3:classification>
+    <j.3:siteAddress>Institut des Sciences de la Communication et de l'Information. Domaine Universitaire 33607 Pessac</j.3:siteAddress>
     <j.0:tel>05 57 12 61 41</j.0:tel>
     <j.0:email>Jean-Francois.Dareths@u-bordeaux-montaigne.fr</j.0:email>
-    <j.3:name>Jean-François Dareths</j.3:name>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Sciences des Territoires et de la Communication</j.1:prefLabel>
-    <rdfs:label>Bordeaux</rdfs:label>
+    <j.4:name>Jean-François Dareths</j.4:name>
+    <j.2:prefLabel>Sciences des Territoires et de la Communication</j.2:prefLabel>
+    <j.3:classification>Conception de projet numerique et multimédia</j.3:classification>
+    <j.0:street-address>Institut des Sciences de la Communication et de l'Information. Domaine Universitaire</j.0:street-address>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F43">
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
     <j.0:url>https://formation.univ-pau.fr/fr/accueil/sciences-humaines-et-sociales-SHS/master-14/master-patrimoine-et-musees-program-77-1/parcours-museologie-museographie-subprogram-124-1.html</j.0:url>
-    <rdfs:label>Muséologie, Muséographie</rdfs:label>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Pau"/>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:street-address>Avenue du Doyen Poplawski</j.0:street-address>
     <j.0:email>scolarite.lettres@univ-pau.fr</j.0:email>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.3:classification>Patrimoine et Musées</j.3:classification>
     <j.0:tel>05 59 40 72 17</j.0:tel>
+    <j.3:classification>Muséologie, Muséographie</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Pau</rdfs:label>
-    <j.1:prefLabel>Lettres Langues Sciences Humaines Sport</j.1:prefLabel>
-    <rdfs:label>Patrimoine et Musées</rdfs:label>
-    <j.2:siteAddress>Avenue du Doyen Poplawski 64013 Pau</j.2:siteAddress>
-    <rdfs:label>6 mois</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.0:region>Pau</j.0:region>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.2:prefLabel>Lettres Langues Sciences Humaines Sport</j.2:prefLabel>
+    <j.1:dureeStage>6 mois</j.1:dureeStage>
+    <j.3:siteAddress>Avenue du Doyen Poplawski 64013 Pau</j.3:siteAddress>
+    <j.0:postal-code>64013</j.0:postal-code>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F21">
-    <rdfs:label>Master spécialisé (Bac + 5)</rdfs:label>
-    <rdfs:label>Paris</rdfs:label>
+    <j.3:classification>Jeux vidéo et transmédias</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>4 à 6 mois</rdfs:label>
-    <rdfs:label>Jeux vidéo et transmédias</rdfs:label>
-    <j.1:prefLabel>Conférences des Grandes Ecoles</j.1:prefLabel>
-    <rdfs:label>CNAM-ENJMIN</rdfs:label>
-    <j.2:siteAddress>138 rue de Bordeaux 16000 Angoulême</j.2:siteAddress>
+    <j.0:postal-code>16000</j.0:postal-code>
+    <j.2:prefLabel>Conférences des Grandes Ecoles</j.2:prefLabel>
+    <j.1:informationsComplementaires>CNAM-ENJMIN</j.1:informationsComplementaires>
+    <j.3:siteAddress>138 rue de Bordeaux 16000 Angoulême</j.3:siteAddress>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:url>http://www.gobelins.fr/formation/id01-mastere-specialise-jeu-video-et-transmedia-cnam-enjmin-interactive-digital</j.0:url>
-    <rdfs:label>Interactivité Digital Expériences</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Paris"/>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.0:region>Angoulême</j.0:region>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratProfessionnalisation>
+    <j.3:classification>Master spécialisé (Bac + 5)</j.3:classification>
+    <j.3:classification>Interactivité Digital Expériences</j.3:classification>
+    <j.1:dureeStage>4 à 6 mois</j.1:dureeStage>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:tel>05 45 68 06 78</j.0:tel>
+    <j.0:street-address>138 rue de Bordeaux</j.0:street-address>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F33">
-    <rdfs:label>3 à 6 mois</rdfs:label>
-    <rdfs:label>Bordeaux</rdfs:label>
-    <rdfs:label>Régie des Œuvres et Médiation de l'Architecture et du Patrimoine</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
     <j.0:email>christian.gensbeitel@u-bordeaux-montaigne.fr</j.0:email>
-    <j.3:name>Christian Gensbeitel</j.3:name>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux"/>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.4:name>Christian Gensbeitel</j.4:name>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:unitOf>AUSONIUS 567</j.2:unitOf>
-    <j.1:prefLabel>Humanités</j.1:prefLabel>
-    <j.2:unitOf>IRAMAT 50620</j.2:unitOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.3:unitOf>AUSONIUS 567</j.3:unitOf>
+    <j.1:dureeStage>3 à 6 mois</j.1:dureeStage>
+    <j.0:region>Pessac</j.0:region>
+    <j.0:postal-code>33607</j.0:postal-code>
+    <j.2:prefLabel>Humanités</j.2:prefLabel>
+    <j.3:unitOf>IRAMAT 50620</j.3:unitOf>
+    <j.3:classification>Patrimoine et Musées</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:classification>Régie des Œuvres et Médiation de l'Architecture et du Patrimoine</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:tel>05 57 12 44 02</j.0:tel>
-    <rdfs:label>Patrimoine et Musées</rdfs:label>
-    <j.2:siteAddress>Département Histoire de l'Art et Archéologie. Domaine Universitaire 33607 Pessac</j.2:siteAddress>
-    <j.2:unitOf>PASEA 5199</j.2:unitOf>
+    <j.3:siteAddress>Département Histoire de l'Art et Archéologie. Domaine Universitaire 33607 Pessac</j.3:siteAddress>
+    <j.3:unitOf>PASEA 5199</j.3:unitOf>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.0:street-address>Département Histoire de l'Art et Archéologie. Domaine Universitaire</j.0:street-address>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F11">
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Erasmus Mundus</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
     <j.0:url>http://euromime.org/fr/accueil/le-master-euromime</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <rdfs:label>Information et Communication</rdfs:label>
-    <j.2:unitOf>TECHNE</j.2:unitOf>
-    <rdfs:label>0</rdfs:label>
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
-    <rdfs:label>Euromime</rdfs:label>
-    <j.3:name>Jean-François Cerisier</j.3:name>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.0:street-address>8 rue René Descartes</j.0:street-address>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:unitOf>TECHNE</j.3:unitOf>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.3:classification>Euromime</j.3:classification>
+    <j.1:informationsComplementaires>Erasmus Mundus</j.1:informationsComplementaires>
+    <j.4:name>Jean-François Cerisier</j.4:name>
+    <j.3:classification>Information et Communication</j.3:classification>
     <j.0:tel>05 49 45 45 45</j.0:tel>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:email>cerisier@univ-poitiers.fr</j.0:email>
-    <rdfs:label>Poitiers + villes monde</rdfs:label>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:dureeStage>0</j.1:dureeStage>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F23">
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Tiers de Confiance et sécurité Numérique</rdfs:label>
-    <j.1:prefLabel>Droit Politique Gestion</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>La Rochelle</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
+    <j.1:dureeStage>3 mois minimum</j.1:dureeStage>
+    <j.0:postal-code>17024</j.0:postal-code>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/La_Rochelle"/>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.2:prefLabel>Droit Politique Gestion</j.2:prefLabel>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:tel>05 46 45 85 20</j.0:tel>
     <j.0:url>https://formations.univ-larochelle.fr/master-securite-numerique</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.3:classification>Tiers de Confiance et sécurité Numérique</j.3:classification>
     <j.0:email>master.tcsn@univ-lr.fr</j.0:email>
-    <rdfs:label>3 mois minimum</rdfs:label>
-    <rdfs:label>Droit Du Numérique</rdfs:label>
-    <j.2:siteAddress>45 rue François de Vaux de Foletier 17024 La Rochelle</j.2:siteAddress>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.0:street-address>45 rue François de Vaux de Foletier</j.0:street-address>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.0:region>La Rochelle</j.0:region>
+    <j.3:siteAddress>45 rue François de Vaux de Foletier 17024 La Rochelle</j.3:siteAddress>
+    <j.3:classification>Droit Du Numérique</j.3:classification>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F35">
-    <j.2:unitOf>MICA</j.2:unitOf>
-    <rdfs:label>Direction des projets ou Etablissements culturels</rdfs:label>
-    <j.1:prefLabel>Humanités</j.1:prefLabel>
-    <rdfs:label>Partenariat avec Sciences PO Bordeaux</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
-    <j.3:name>Alexandre Péraud</j.3:name>
-    <rdfs:label>4 à 6 mois</rdfs:label>
-    <j.2:siteAddress>Département Lettres. Université Michel Montaigne Bordeaux 3 33607 Pessac</j.2:siteAddress>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Sciences Po et Université Bordeaux Inter culture</rdfs:label>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
+    <j.1:informationsComplementaires>Partenariat avec Sciences PO Bordeaux</j.1:informationsComplementaires>
+    <j.3:unitOf>MICA</j.3:unitOf>
+    <j.0:region>Pessac</j.0:region>
+    <j.2:prefLabel>Humanités</j.2:prefLabel>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
+    <j.4:name>Alexandre Péraud</j.4:name>
+    <j.0:street-address>Département Lettres. Université Michel Montaigne Bordeaux 3</j.0:street-address>
+    <j.1:dureeStage>4 à 6 mois</j.1:dureeStage>
+    <j.3:siteAddress>Département Lettres. Université Michel Montaigne Bordeaux 3 33607 Pessac</j.3:siteAddress>
+    <j.3:classification>Sciences Po et Université Bordeaux Inter culture</j.3:classification>
+    <j.3:classification>Ingénierie de projets culturels et interculturels</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux"/>
     <j.0:tel>05 57 12 62 04</j.0:tel>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:email>alexandre.peraud@u-bordeaux-montaigne.fr</j.0:email>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:url>http://www.u-bordeaux-montaigne.fr/fr/formations/offre-de-formation-2016-2020/master-XB/lettres-et-lettres-langues-LGC.12/master-ingenierie-de-projets-culturels-et-interculturels-program-mdf16-216.html</j.0:url>
-    <rdfs:label>Bordeaux</rdfs:label>
+    <j.3:classification>Direction des projets ou Etablissements culturels</j.3:classification>
+    <j.0:postal-code>33607</j.0:postal-code>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:unitOf>ARTES</j.2:unitOf>
-    <rdfs:label>Ingénierie de projets culturels et interculturels</rdfs:label>
-    <j.2:unitOf>TELEM</j.2:unitOf>
+    <j.3:unitOf>ARTES</j.3:unitOf>
+    <j.3:unitOf>TELEM</j.3:unitOf>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F13">
-    <rdfs:label>0</rdfs:label>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Droit du Patrimoine</rdfs:label>
-    <j.2:unitOf>CECOJI</j.2:unitOf>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <j.1:prefLabel>Droit et Sciences Sociales</j.1:prefLabel>
-    <rdfs:label>Propriété Intellectuelle</rdfs:label>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:classification>Propriété Intellectuelle</j.3:classification>
+    <j.3:unitOf>CECOJI</j.3:unitOf>
+    <j.0:street-address>15 rue Sainte Opportune</j.0:street-address>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.2:prefLabel>Droit et Sciences Sociales</j.2:prefLabel>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:dureeStage>0</j.1:dureeStage>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:classification>Droit du Patrimoine</j.3:classification>
     <j.0:tel>05 49 36 64 40</j.0:tel>
     <j.0:email>elisabeth.rebillier@univ-poitiers.fr</j.0:email>
-    <j.2:siteAddress>15 rue Sainte Opportune 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.3:name>Philippe Gaudrat</j.3:name>
+    <j.3:siteAddress>15 rue Sainte Opportune 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.4:name>Philippe Gaudrat</j.4:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F25">
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.2:siteAddress>1 parvis Fernand Braudel 17042 La Rochelle</j.2:siteAddress>
+    <j.3:siteAddress>1 parvis Fernand Braudel 17042 La Rochelle</j.3:siteAddress>
     <j.0:url>https://formations.univ-larochelle.fr/master-e-tourisme</j.0:url>
-    <rdfs:label>Tourisme</rdfs:label>
+    <j.1:dureeStage>12 à 30 semaines</j.1:dureeStage>
+    <j.3:classification>e-Tourisme et Ingénierie Culturelle des Patrimoines</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
     <j.0:tel>05 46 45 68 02</j.0:tel>
-    <rdfs:label>e-Tourisme et Ingénierie Culturelle des Patrimoines</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/La_Rochelle"/>
+    <j.0:postal-code>17042</j.0:postal-code>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.3:classification>Tourisme</j.3:classification>
     <j.0:email>master.tourisme@univ-lr.fr</j.0:email>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <rdfs:label>La Rochelle</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.1:prefLabel>Lettres Langues Arts Sciences Humaines</j.1:prefLabel>
-    <rdfs:label>12 à 30 semaines</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.0:street-address>1 parvis Fernand Braudel</j.0:street-address>
+    <j.0:region>La Rochelle</j.0:region>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.2:prefLabel>Lettres Langues Arts Sciences Humaines</j.2:prefLabel>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F37">
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
-    <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:email>emmanuel.plasseraud@u-bordeaux-montaigne.fr</j.0:email>
-    <j.2:unitOf>CLARE 4593</j.2:unitOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Humanités</j.1:prefLabel>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:unitOf>CLARE 4593</j.3:unitOf>
+    <j.3:classification>Art du Spectacle et Audiovisuel</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:postal-code>33607</j.0:postal-code>
+    <j.2:prefLabel>Humanités</j.2:prefLabel>
     <j.0:url>http://www.u-bordeaux-montaigne.fr/fr/formations/offre-de-formation-2016-2020/master-XB/arts-arts-du-spectacle-musicologie-ART.3/master-documentaires-et-archives-program-mar16-216.html/</j.0:url>
-    <j.3:name>Emmanuel Plasseraud</j.3:name>
-    <rdfs:label>Cinéma et Audiovisuel</rdfs:label>
-    <j.2:siteAddress>Département Arts. Université Bordeaux Montaigne 33607 Pessac</j.2:siteAddress>
-    <rdfs:label>2 mois</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Art du Spectacle et Audiovisuel</rdfs:label>
-    <rdfs:label>Documentaires et Archives</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.4:name>Emmanuel Plasseraud</j.4:name>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.0:street-address>Département Arts. Université Bordeaux Montaigne</j.0:street-address>
+    <j.3:siteAddress>Département Arts. Université Bordeaux Montaigne 33607 Pessac</j.3:siteAddress>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux"/>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.0:region>Pessac</j.0:region>
+    <j.3:classification>Documentaires et Archives</j.3:classification>
     <j.0:tel> 05 57 12 66 78</j.0:tel>
-    <j.2:unitOf>ARTES</j.2:unitOf>
-    <rdfs:label>Bordeaux</rdfs:label>
+    <j.1:dureeStage>2 mois</j.1:dureeStage>
+    <j.3:classification>Cinéma et Audiovisuel</j.3:classification>
+    <j.3:unitOf>ARTES</j.3:unitOf>
+    <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F15">
-    <rdfs:label>OUI</rdfs:label>
-    <rdfs:label>Informatique</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:unitOf>LIAS</j.2:unitOf>
-    <j.2:siteAddress>9 rue Charles-Claude Chenou 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <j.3:name>Pascal Lienhardt</j.3:name>
-    <rdfs:label>Sciences Technologies Santé</rdfs:label>
-    <j.1:prefLabel>Sciences Fondamentales et Appliquées</j.1:prefLabel>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:classification>Sciences Technologies Santé</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:siteAddress>9 rue Charles-Claude Chenou 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.4:name>Pascal Lienhardt</j.4:name>
+    <j.3:unitOf>LIAS</j.3:unitOf>
+    <j.2:prefLabel>Sciences Fondamentales et Appliquées</j.2:prefLabel>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:tel>05 49 45 35 73</j.0:tel>
     <j.0:url>http://www.vocasciences.fr/</j.0:url>
-    <j.2:unitOf>XLIM-SIC</j.2:unitOf>
-    <rdfs:label>Informatique Mathématiques Multimédia Télécommunication</rdfs:label>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf>XLIM-SIC</j.3:unitOf>
     <j.0:email>pascal.lienhardt@univ-poitiers.fr</j.0:email>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:classification>Informatique Mathématiques Multimédia Télécommunication</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.0:street-address>9 rue Charles-Claude Chenou</j.0:street-address>
+    <j.3:classification>Informatique</j.3:classification>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratProfessionnalisation>
+    <j.1:dureeStage>OUI</j.1:dureeStage>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F9">
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:tel>05 49 45 32 71</j.0:tel>
-    <rdfs:label>Littératures et Cultures de l'Image</rdfs:label>
-    <rdfs:label>0</rdfs:label>
+    <j.3:classification>Littératures et Cultures de l'Image</j.3:classification>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:email>anne.cecile.guilbard@univ-poitiers.fr</j.0:email>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.3:name>Anne-Cécile Guilbard</j.3:name>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Poitiers</rdfs:label>
-    <j.2:unitOf>FORELL</j.2:unitOf>
-    <rdfs:label>Arts Lettres Langues</rdfs:label>
-    <j.2:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
-    <rdfs:label>Texte/Image : Littératures, Ecrans, Scènes TEXTIM</rdfs:label>
+    <j.4:name>Anne-Cécile Guilbard</j.4:name>
+    <j.0:street-address>1 rue Raymond Cantel</j.0:street-address>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:classification>Arts Lettres Langues</j.3:classification>
+    <j.3:unitOf>FORELL</j.3:unitOf>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:dureeStage>0</j.1:dureeStage>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:classification>Texte/Image : Littératures, Ecrans, Scènes TEXTIM</j.3:classification>
+    <j.0:postal-code>86073</j.0:postal-code>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F27">
-    <j.2:siteAddress>Avenue Michel Crépeau 17042 La Rochelle</j.2:siteAddress>
+    <j.3:classification>Informatique</j.3:classification>
+    <j.3:siteAddress>Avenue Michel Crépeau 17042 La Rochelle</j.3:siteAddress>
     <j.0:tel>05 46 45 82 59</j.0:tel>
-    <rdfs:label>Informatique</rdfs:label>
-    <rdfs:label>Ingénierie de la Numérisation et de la Dématérialisation</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/La_Rochelle"/>
     <j.0:email>master.icone@univ-lr.fr</j.0:email>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Sciences Technologies Santé</rdfs:label>
-    <rdfs:label>20 semaines minimum</rdfs:label>
-    <rdfs:label>La Rochelle</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.3:classification>Sciences Technologies Santé</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:classification>Ingénierie de la Numérisation et de la Dématérialisation</j.3:classification>
+    <j.0:region>La Rochelle</j.0:region>
+    <j.0:postal-code>17042</j.0:postal-code>
+    <j.1:dureeStage>20 semaines minimum</j.1:dureeStage>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.0:street-address>Avenue Michel Crépeau</j.0:street-address>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
     <j.0:url>https://formations.univ-larochelle.fr/master-ingenierie-numerisation-dematerialisation</j.0:url>
-    <j.1:prefLabel>Sciences et Technologies</j.1:prefLabel>
+    <j.2:prefLabel>Sciences et Technologies</j.2:prefLabel>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F39">
-    <j.3:name>Xavier Daverat</j.3:name>
-    <rdfs:label>3 mois minimum</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.4:name>Xavier Daverat</j.4:name>
+    <j.1:typeDeStage>Stage ou Mémoire</j.1:typeDeStage>
+    <j.0:street-address>16 Avenue Léon Duguit</j.0:street-address>
     <j.0:email>xavier.daverat@u-bordeaux.fr</j.0:email>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
-    <rdfs:label>Droit de la Propriété Intellectuelle</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:dureeStage>3 mois minimum</j.1:dureeStage>
     <j.0:tel>05 56 84 29 93</j.0:tel>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:classification>AudIance (Administration, Usages et Droit des Institutions Artistiques et des Nouveautés dans la Culture et l’Evénementiel)</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Pessac"/>
+    <j.3:classification>Droit Privé</j.3:classification>
     <j.0:url>https://droit.u-bordeaux.fr/Formations/Masters/Mention-Droit-de-la-propriete-intellectuelle/Master-2-Droit-de-la-propriete-intellectuelle-parcours-AUDIANCE</j.0:url>
-    <rdfs:label>Stage ou Mémoire</rdfs:label>
-    <j.2:siteAddress>16 Avenue Léon Duguit 33608 Pessac</j.2:siteAddress>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Droit et Science Politique</j.1:prefLabel>
-    <rdfs:label>Droit Privé</rdfs:label>
-    <rdfs:label>AudIance (Administration, Usages et Droit des Institutions Artistiques et des Nouveautés dans la Culture et l’Evénementiel)</rdfs:label>
-    <rdfs:label>Pessac</rdfs:label>
+    <j.3:siteAddress>16 Avenue Léon Duguit 33608 Pessac</j.3:siteAddress>
+    <j.2:prefLabel>Droit et Science Politique</j.2:prefLabel>
+    <j.3:classification>Droit de la Propriété Intellectuelle</j.3:classification>
+    <j.0:region>Pessac</j.0:region>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
+    <j.0:postal-code>33608</j.0:postal-code>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F17">
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
     <j.0:email>emile.amouzou@univ-poitiers.fr</j.0:email>
-    <rdfs:label>Entre Janvier</rdfs:label>
-    <rdfs:label>Arts Lettres Langues</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>6 mois</rdfs:label>
-    <j.2:unitOf>CEREGE</j.2:unitOf>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.0:street-address>1 rue Raymond Cantel</j.0:street-address>
+    <j.3:unitOf>CEREGE</j.3:unitOf>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>LEA Négociateur Trilingue en Commerce International</rdfs:label>
-    <rdfs:label>Cultures et Sociétes Etrangères</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Fin Août</rdfs:label>
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
-    <j.2:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.2:siteAddress>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:classification>Arts Lettres Langues</j.3:classification>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
+    <j.3:classification>Cultures et Sociétes Etrangères</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.3:classification>LEA Négociateur Trilingue en Commerce International</j.3:classification>
+    <j.1:dureeStage>6 mois</j.1:dureeStage>
     <j.0:tel>05 49 45 42 79</j.0:tel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.3:name>Emile Amouzou</j.3:name>
+    <j.4:name>Emile Amouzou</j.4:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F29">
-    <rdfs:label>Master à distance</rdfs:label>
-    <rdfs:label>Algorithmique, Calcul Symbolique et Optimisation Numérique</rdfs:label>
-    <j.2:unitOf>XLIM</j.2:unitOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:siteAddress>123 avenue Albert Thomas 87060 Limoges</j.2:siteAddress>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:informationsComplementaires>Master à distance</j.1:informationsComplementaires>
+    <j.3:unitOf>XLIM</j.3:unitOf>
+    <j.0:street-address>123 avenue Albert Thomas</j.0:street-address>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Limoges"/>
+    <j.3:siteAddress>123 avenue Albert Thomas 87060 Limoges</j.3:siteAddress>
     <j.0:tel>05 55 45 72 00</j.0:tel>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.3:classification>Algorithmique, Calcul Symbolique et Optimisation Numérique</j.3:classification>
+    <j.0:postal-code>87060</j.0:postal-code>
     <j.0:email>paul.armand@unilim.fr</j.0:email>
-    <rdfs:label>Limoges</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Limoges"/>
-    <rdfs:label>4 à 6 mois</rdfs:label>
-    <j.3:name>Paul Armand</j.3:name>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.0:region>Limoges</j.0:region>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Limoges"/>
+    <j.1:dureeStage>4 à 6 mois</j.1:dureeStage>
+    <j.4:name>Paul Armand</j.4:name>
     <j.0:url>http://www.unilim.fr/acsyon</j.0:url>
-    <j.1:prefLabel>Sciences et Techniques</j.1:prefLabel>
+    <j.2:prefLabel>Sciences et Techniques</j.2:prefLabel>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F19">
-    <rdfs:label>Master 2</rdfs:label>
+    <j.0:street-address>1 rue Raymond Cantel</j.0:street-address>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <rdfs:label>Début Octobre</rdfs:label>
-    <rdfs:label>2 mois minimum</rdfs:label>
-    <j.3:name>Céline Lagéot</j.3:name>
-    <rdfs:label>Entre Mai</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Juriste Linguiste</rdfs:label>
-    <j.2:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <j.2:unitOf>MIMMOC</j.2:unitOf>
-    <j.1:prefLabel>Droit et Sciences Sociales</j.1:prefLabel>
-    <j.2:unitOf>FORELL</j.2:unitOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:classification>Juriste Linguiste</j.3:classification>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.4:name>Céline Lagéot</j.4:name>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:classification>Droit des Affaires</j.3:classification>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.3:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.3:unitOf>MIMMOC</j.3:unitOf>
+    <j.2:prefLabel>Droit et Sciences Sociales</j.2:prefLabel>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:unitOf>FORELL</j.3:unitOf>
+    <j.1:dureeStage>2 mois minimum</j.1:dureeStage>
     <j.0:email>sylvie.schmal@univ-poitiers.fr</j.0:email>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
     <j.0:tel>05 49 45 42 79</j.0:tel>
-    <rdfs:label>Droit des Affaires</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.2:unitOf>CECOJI</j.2:unitOf>
+    <j.3:unitOf>CECOJI</j.3:unitOf>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F3">
-    <rdfs:label>Poitiers</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>2 à 6 mois</rdfs:label>
-    <rdfs:label>01 avril</rdfs:label>
-    <j.1:prefLabel>Sciences Humaines et Arts</j.1:prefLabel>
-    <rdfs:label>30 septembre</rdfs:label>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.1:dureeStage>2 à 6 mois</j.1:dureeStage>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:dateDebut rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Wed Apr 01 00:00:00 CET 1970</j.1:dateDebut>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:classification>Information et Communication</j.3:classification>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.2:prefLabel>Sciences Humaines et Arts</j.2:prefLabel>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:classification>Web Editoral</j.3:classification>
     <j.0:email>yannis.delmas@univ-poitiers.fr</j.0:email>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Web Editoral</rdfs:label>
     <j.0:tel>05 49 45 45 30</j.0:tel>
-    <j.3:name>Yannis Delmas</j.3:name>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Information et Communication</rdfs:label>
+    <j.1:dateFinObligatoire rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Wed Sep 30 00:00:00 CET 1970</j.1:dateFinObligatoire>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.0:street-address>8 rue René Descartes</j.0:street-address>
+    <j.4:name>Yannis Delmas</j.4:name>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratProfessionnalisation>
     <j.0:url>http://sha.univ-poitiers.fr/masterweb/</j.0:url>
-    <j.2:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
+    <j.3:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.3:siteAddress>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F1">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Marketing Plurimédia et consommation</rdfs:label>
-    <j.1:prefLabel>IAE</j.1:prefLabel>
-    <rdfs:label>6 mois</rdfs:label>
-    <rdfs:label>Management des marques et produits jeunesse</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <j.2:unitOf>MSHS</j.2:unitOf>
+    <j.1:dateDebut rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Fri Feb 27 00:00:00 CET 1970</j.1:dateDebut>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Angoulême"/>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.2:prefLabel>IAE</j.2:prefLabel>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.0:region>Angoulême</j.0:region>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:classification>Marketing Plurimédia et consommation</j.3:classification>
+    <j.3:unitOf>MSHS</j.3:unitOf>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
     <j.0:email>daconceicao@poitiers.iae-France.fr</j.0:email>
-    <rdfs:label>CEPE</rdfs:label>
-    <rdfs:label>27 février</rdfs:label>
-    <j.2:unitOf>CEREGE</j.2:unitOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.3:unitOf>CEREGE</j.3:unitOf>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.1:serviceStageEmploi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:serviceStageEmploi>
     <j.0:url>http://iae.univ-poitiers.fr/fr/stages-et-emplois</j.0:url>
-    <j.2:siteAddress>186 rue de Bordeaux 16025 Angoulême</j.2:siteAddress>
-    <j.3:name>Inés de La Ville</j.3:name>
-    <rdfs:label>31 août</rdfs:label>
+    <j.3:classification>Marketing Plurimédia et Consommation</j.3:classification>
+    <j.3:siteAddress>186 rue de Bordeaux 16025 Angoulême</j.3:siteAddress>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.4:name>Inés de La Ville</j.4:name>
+    <j.1:dateFinObligatoire rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Mon Aug 31 00:00:00 CET 1970</j.1:dateFinObligatoire>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.0:street-address>186 rue de Bordeaux</j.0:street-address>
     <j.0:url>http://cepe.univ-poitiers.fr/</j.0:url>
     <j.0:tel>05 45 21 00 11</j.0:tel>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <rdfs:label>Angoulême</rdfs:label>
-    <rdfs:label>Marketing Plurimédia et Consommation</rdfs:label>
+    <j.3:classification>Management des marques et produits jeunesse</j.3:classification>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.0:postal-code>16025</j.0:postal-code>
+    <j.1:dureeStage>6 mois</j.1:dureeStage>
+    <j.1:informationsComplementaires>CEPE</j.1:informationsComplementaires>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F7">
-    <rdfs:label>EESI</rdfs:label>
     <j.0:url>http://www.eesi.eu/site/</j.0:url>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:region>Angoulême</j.0:region>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
     <j.0:email>s.burel@eesi.eu</j.0:email>
-    <j.3:name>Patrick Clanet</j.3:name>
-    <rdfs:label>Arts Lettres Langues</rdfs:label>
-    <j.2:siteAddress>134 rue de Bordeaux 16000 Angoulême</j.2:siteAddress>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Angoulême</rdfs:label>
+    <j.1:informationsComplementaires>EESI</j.1:informationsComplementaires>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Angoulême"/>
+    <j.4:name>Patrick Clanet</j.4:name>
+    <j.3:siteAddress>134 rue de Bordeaux 16000 Angoulême</j.3:siteAddress>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Bande Dessinée</rdfs:label>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
     <j.0:tel>05 45 92 01 01</j.0:tel>
-    <j.2:unitOf>FORELL</j.2:unitOf>
-    <rdfs:label>Texte/Image : Littératures, Ecrans, Scènes TEXTIM</rdfs:label>
+    <j.3:classification>Bande Dessinée</j.3:classification>
+    <j.3:unitOf>FORELL</j.3:unitOf>
+    <j.3:classification>Texte/Image : Littératures, Ecrans, Scènes TEXTIM</j.3:classification>
+    <j.3:classification>Arts Lettres Langues</j.3:classification>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.0:street-address>134 rue de Bordeaux</j.0:street-address>
+    <j.0:postal-code>16000</j.0:postal-code>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F5">
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.0:postal-code>86073</j.0:postal-code>
     <j.0:tel>05 49 36 62 06</j.0:tel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Information et Communication</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <j.2:unitOf>TECHNE</j.2:unitOf>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.1:informationsComplementaires>Master à distance</j.1:informationsComplementaires>
+    <j.3:classification>Information et Communication</j.3:classification>
+    <j.3:unitOf>TECHNE</j.3:unitOf>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
     <j.0:url>http://ll.univ-poitiers.fr/masterime/</j.0:url>
-    <rdfs:label>2 à 5 mois</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
+    <j.1:dureeStage>2 à 5 mois</j.1:dureeStage>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
+    <j.0:street-address>1 rue Raymond Cantel</j.0:street-address>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.3:name>Hassina El Kechai</j.3:name>
+    <j.3:classification>Ingénierie des Médias pour l'Education</j.3:classification>
+    <j.4:name>Hassina El Kechai</j.4:name>
     <j.0:email>hassina.el.kechai@univ-poitiers.fr</j.0:email>
-    <rdfs:label>Master à distance</rdfs:label>
-    <j.2:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label>Ingénierie des Médias pour l'Education</rdfs:label>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratProfessionnalisation>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.3:classification>Master 2</j.3:classification>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F40">
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Droit Privé</rdfs:label>
-    <j.2:siteAddress>16 Avenue Léon Duguit 33608 Pessac</j.2:siteAddress>
-    <j.1:prefLabel>Droit et Science Politique</j.1:prefLabel>
-    <j.3:name>Xavier Daverat</j.3:name>
+    <j.3:classification>Droit de la Culture et des Créations Intellectuelles</j.3:classification>
+    <j.0:street-address>16 Avenue Léon Duguit</j.0:street-address>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Pessac"/>
+    <j.3:siteAddress>16 Avenue Léon Duguit 33608 Pessac</j.3:siteAddress>
+    <j.2:prefLabel>Droit et Science Politique</j.2:prefLabel>
+    <j.4:name>Xavier Daverat</j.4:name>
     <j.0:email>xavier.daverat@u-bordeaux.fr</j.0:email>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Droit des Créations Intellectuelles</rdfs:label>
     <j.0:tel>05 56 84 85 10</j.0:tel>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <rdfs:label>Droit de la Culture et des Créations Intellectuelles</rdfs:label>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:classification>Droit des Créations Intellectuelles</j.3:classification>
+    <j.0:postal-code>33608</j.0:postal-code>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.0:region>Pessac</j.0:region>
+    <j.3:classification>Droit Privé</j.3:classification>
     <j.0:url>http://www.u-bordeaux.fr/formation/2015/PRMMDPRI0_232/master-mention-droit-prive-m2-specialite-professionnelle-droit-des-creations-intellectuelles</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Pessac</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F30">
-    <j.3:name>Denis Barataud</j.3:name>
-    <rdfs:label>Master à distance</rdfs:label>
-    <rdfs:label>Limoges</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.0:region>Limoges</j.0:region>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.1:dureeStage>4 à 6 mois</j.1:dureeStage>
+    <j.4:name>Denis Barataud</j.4:name>
     <j.0:tel>05 55 45 77 53</j.0:tel>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Limoges"/>
-    <rdfs:label>4 à 6 mois</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Limoges"/>
+    <j.0:postal-code>87060</j.0:postal-code>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Limoges"/>
+    <j.0:street-address>123 Avenue Albert Thomas</j.0:street-address>
     <j.0:email>denis.barataud@unilim.fr</j.0:email>
-    <j.2:siteAddress>123 Avenue Albert Thomas 87060 Limoges</j.2:siteAddress>
+    <j.3:classification>Architecture des Réseaux et Technologies Induites des Circuits de Communications</j.3:classification>
+    <j.3:siteAddress>123 Avenue Albert Thomas 87060 Limoges</j.3:siteAddress>
+    <j.1:informationsComplementaires>Master à distance</j.1:informationsComplementaires>
     <j.0:url>http://www.sciences.unilim.fr/physique/master-articc/</j.0:url>
-    <j.1:prefLabel>Sciences et Techniques</j.1:prefLabel>
-    <rdfs:label>Architecture des Réseaux et Technologies Induites des Circuits de Communications</rdfs:label>
-    <j.2:unitOf>XLIM</j.2:unitOf>
+    <j.2:prefLabel>Sciences et Techniques</j.2:prefLabel>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf>XLIM</j.3:unitOf>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F20">
     <j.0:tel>05 49 49 61 34</j.0:tel>
-    <rdfs:label>CNAM-ENJMIN</rdfs:label>
-    <j.2:siteAddress>138 rue de Bordeaux 16000 Angoulême</j.2:siteAddress>
-    <j.1:prefLabel>Ecole Ingénieur CNAM</j.1:prefLabel>
-    <rdfs:label>Diplôme Ingénieur</rdfs:label>
-    <rdfs:label>Angoulême</rdfs:label>
+    <j.3:siteAddress>138 rue de Bordeaux 16000 Angoulême</j.3:siteAddress>
+    <j.0:street-address>138 rue de Bordeaux</j.0:street-address>
+    <j.3:classification>Diplôme Ingénieur</j.3:classification>
+    <j.2:prefLabel>Ecole Ingénieur CNAM</j.2:prefLabel>
+    <j.0:region>Angoulême</j.0:region>
+    <j.3:classification>Ingénieur informatique en sciences et technologies des médias numériques</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Apprentissage de 3 ans</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.0:postal-code>16000</j.0:postal-code>
+    <j.1:informationsComplementaires>CNAM-ENJMIN</j.1:informationsComplementaires>
     <j.0:email>tallain-launay@cnam-poitou-charentes.fr</j.0:email>
     <j.0:url>http://www.cnam-poitou-charentes.fr/site/formation/ingenieur_stmn#</j.0:url>
-    <rdfs:label>Ingénieur informatique en sciences et technologies des médias numériques</rdfs:label>
-    <j.3:name>Thomas Allain-Launay</j.3:name>
+    <j.1:dureeStage>Apprentissage de 3 ans</j.1:dureeStage>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Angoulême"/>
+    <j.4:name>Thomas Allain-Launay</j.4:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F42">
     <j.0:email>scolarite.lettres@univ-pau.fr</j.0:email>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.3:classification>Patrimoine et Musées</j.3:classification>
     <j.0:tel>05 59 40 72 17</j.0:tel>
     <j.0:url>https://formation.univ-pau.fr/fr/accueil/sciences-humaines-et-sociales-SHS/master-14/master-patrimoine-et-musees-program-77-1/parcours-valorisation-des-patrimoines-pour-les-collectivites-territoriales-subprogram-132-1.html</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Pau</rdfs:label>
-    <rdfs:label>Patrimoine et Musées</rdfs:label>
-    <j.2:siteAddress>Avenue du Doyen Poplawski 64013 Pau</j.2:siteAddress>
-    <rdfs:label>6 mois</rdfs:label>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Valorisation des Patrimoines</rdfs:label>
+    <j.0:region>Pau</j.0:region>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Pau"/>
+    <j.1:dureeStage>6 mois</j.1:dureeStage>
+    <j.3:siteAddress>Avenue du Doyen Poplawski 64013 Pau</j.3:siteAddress>
+    <j.3:classification>Valorisation des Patrimoines</j.3:classification>
+    <j.0:postal-code>64013</j.0:postal-code>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.1:prefLabel>Lettres Langues Sciences Humaines Sport</j.1:prefLabel>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.2:prefLabel>Lettres Langues Sciences Humaines Sport</j.2:prefLabel>
+    <j.0:street-address>Avenue du Doyen Poplawski</j.0:street-address>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F32">
-    <j.1:prefLabel>Sciences des Territoires et de la Communication</j.1:prefLabel>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.2:prefLabel>Sciences des Territoires et de la Communication</j.2:prefLabel>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:siteAddress>Institut des Sciences  de la Communication et de l'Information.Domaine Universitaire 33607 Pessac</j.2:siteAddress>
-    <rdfs:label>Documents numériques et humanités digitales</rdfs:label>
-    <j.3:name>Soufiane Rouissi</j.3:name>
-    <rdfs:label>Humanités Numériques</rdfs:label>
-    <j.2:unitOf>MICA 4426</j.2:unitOf>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:siteAddress>Institut des Sciences  de la Communication et de l'Information.Domaine Universitaire 33607 Pessac</j.3:siteAddress>
+    <j.1:typeDeStage>OUI</j.1:typeDeStage>
+    <j.4:name>Soufiane Rouissi</j.4:name>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux"/>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:unitOf>MICA 4426</j.3:unitOf>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
+    <j.0:region>Pessac</j.0:region>
+    <j.0:street-address>Institut des Sciences  de la Communication et de l'Information.Domaine Universitaire</j.0:street-address>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:email>soufiane.rouissi@u-bordeaux-montaingne.fr</j.0:email>
+    <j.3:classification>Humanités Numériques</j.3:classification>
     <j.0:url>http://www.u-bordeaux-montaigne.fr/fr/formations/offre-de-formation-2016-2020/master-XB/information-communication-et-mediation-des-sciences-SCINFO.9/master-document-numerique-et-humanites-digitales-program-msn16-216.html#presentation</j.0:url>
-    <rdfs:label>OUI</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Bordeaux</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.3:classification>Documents numériques et humanités digitales</j.3:classification>
+    <j.0:postal-code>33607</j.0:postal-code>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F10">
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:unitOf>CRIHAM</j.2:unitOf>
-    <rdfs:label>8 à 20 semaines</rdfs:label>
-    <j.2:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <j.2:unitOf>CESCM</j.2:unitOf>
-    <j.3:name>Claire Barbillon</j.3:name>
-    <rdfs:label>Consultables sur place</rdfs:label>
-    <rdfs:label>isabelle.fortune@univ-poitiers.fr</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Patrimoine Musée et Multimédia</rdfs:label>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <j.1:prefLabel>Sciences Humaines et Arts</j.1:prefLabel>
-    <j.2:unitOf>HeRMA</j.2:unitOf>
+    <j.3:unitOf>CRIHAM</j.3:unitOf>
+    <j.0:street-address>8 rue René Descartes</j.0:street-address>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.3:unitOf>CESCM</j.3:unitOf>
+    <j.4:name>Claire Barbillon</j.4:name>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.1:dureeStage>8 à 20 semaines</j.1:dureeStage>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:classification>Civilisations : histoire patrimoine et sources</j.3:classification>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.3:classification>Patrimoine Musée et Multimédia</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.2:prefLabel>Sciences Humaines et Arts</j.2:prefLabel>
+    <j.3:unitOf>HeRMA</j.3:unitOf>
+    <dc:subject>isabelle.fortune@univ-poitiers.fr</dc:subject>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:url>http://sha.univ-poitiers.fr/m2patrimoines/</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Civilisations : histoire patrimoine et sources</rdfs:label>
+    <j.0:postal-code>86073</j.0:postal-code>
     <j.0:tel>05 49 45 45 11</j.0:tel>
+    <j.3:classification>Master 2</j.3:classification>
     <j.0:email>nathalie.guillemet@univ-poitiers.fr</j.0:email>
+    <dc:subject>Consultables sur place</dc:subject>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F22">
     <j.0:url>https://formations.univ-larochelle.fr/master-lea-direction-projets-audiovisuels-et-numeriques</j.0:url>
-    <rdfs:label>Arts Lettres Langues</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.0:region>La Rochelle</j.0:region>
+    <j.0:postal-code>17042</j.0:postal-code>
+    <j.3:classification>Arts Lettres Langues</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Lettre Langues Arts Sciences Humaines</j.1:prefLabel>
+    <j.0:street-address>1 parvis Fernand Braude</j.0:street-address>
+    <j.3:classification>Master 2</j.3:classification>
     <j.0:tel>05 16 49 67 89</j.0:tel>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>La Rochelle</rdfs:label>
-    <j.2:siteAddress>1 parvis Fernand Braude 17042 La Rochelle</j.2:siteAddress>
+    <j.2:prefLabel>Lettre Langues Arts Sciences Humaines</j.2:prefLabel>
+    <j.3:classification>Direction de Projets Audiovisuels et Numériques</j.3:classification>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:formationInitiale>
+    <j.3:siteAddress>1 parvis Fernand Braude 17042 La Rochelle</j.3:siteAddress>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
     <j.0:email>master.lea-dpan@univ-lr.fr</j.0:email>
-    <rdfs:label>Direction de Projets Audiovisuels et Numériques</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/La_Rochelle"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F12">
+    <j.3:classification>Master 2</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:unitOf>CECOJI</j.2:unitOf>
+    <j.3:unitOf>CECOJI</j.3:unitOf>
+    <j.0:street-address>15 rue Sainte Opportune</j.0:street-address>
     <j.0:email>elisabeth.rebillier@univ-poitiers.fr</j.0:email>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Poitiers</rdfs:label>
-    <j.1:prefLabel>Droit et Sciences Sociales</j.1:prefLabel>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Droit de la Recherche et Valorisation de l'Innovation</rdfs:label>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.1:informationsComplementaires>Master à distance</j.1:informationsComplementaires>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.2:prefLabel>Droit et Sciences Sociales</j.2:prefLabel>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
+    <j.3:classification>Droit du Patrimoine</j.3:classification>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
     <j.0:tel>05 49 36 64 40</j.0:tel>
-    <rdfs:label>12 semaines</rdfs:label>
-    <rdfs:label>Droit du Patrimoine</rdfs:label>
-    <j.2:siteAddress>15 rue Sainte Opportune 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <j.3:name>Marie-Eugénie Laporte Legeais</j.3:name>
-    <rdfs:label>Master à distance</rdfs:label>
+    <j.3:classification>Droit de la Recherche et Valorisation de l'Innovation</j.3:classification>
+    <j.3:siteAddress>15 rue Sainte Opportune 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:dureeStage>12 semaines</j.1:dureeStage>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.4:name>Marie-Eugénie Laporte Legeais</j.4:name>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F34">
-    <rdfs:label>6 mois</rdfs:label>
+    <j.0:postal-code>33400</j.0:postal-code>
     <j.0:email>master-info@ufr-mi.u-bordeaux1.fr</j.0:email>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
     <j.0:tel>05 40 00 69 02</j.0:tel>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
-    <rdfs:label>Talence</rdfs:label>
-    <rdfs:label>Image, Son, Vidéo</rdfs:label>
-    <j.2:siteAddress>351 Cours de la Libération 33400 Talence</j.2:siteAddress>
-    <rdfs:label>Informatique</rdfs:label>
-    <rdfs:label>Sciences Technologies Santé</rdfs:label>
-    <j.1:prefLabel>Unité de formation Informatique</j.1:prefLabel>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
+    <j.3:classification>Informatique</j.3:classification>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:siteAddress>351 Cours de la Libération 33400 Talence</j.3:siteAddress>
+    <j.3:classification>Sciences Technologies Santé</j.3:classification>
+    <j.0:street-address>351 Cours de la Libération</j.0:street-address>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.3:classification>Image, Son, Vidéo</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.2:prefLabel>Unité de formation Informatique</j.2:prefLabel>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:region>Talence</j.0:region>
     <j.0:url>http://www.u-bordeaux.fr/formation/2015/PRMAIN4_141/master-recherche-professionnel-mention-informatique-specialite-image-son-video/</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.1:dureeStage>6 mois</j.1:dureeStage>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F24">
+    <j.0:region>La Rochelle</j.0:region>
+    <j.0:street-address>1 parvis Fernand Braudel</j.0:street-address>
+    <j.3:classification>Master 2</j.3:classification>
     <j.0:url>https://formations.univ-larochelle.fr/master-developpement-culturel</j.0:url>
     <j.0:tel>05 46 45 68 02</j.0:tel>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
-    <rdfs:label>Développement Culturel de la Ville</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.1:dureeStage>3 mois minimum</j.1:dureeStage>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/La_Rochelle"/>
+    <j.0:postal-code>17042</j.0:postal-code>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Direction de Projets ou Etablissements Culturels</rdfs:label>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
-    <rdfs:label>3 mois minimum</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.1:prefLabel>Lettres Langues Arts Sciences Humaines</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.2:siteAddress>1 parvis Fernand Braudel 17042 La Rochelle</j.2:siteAddress>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.2:prefLabel>Lettres Langues Arts Sciences Humaines</j.2:prefLabel>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:classification>Développement Culturel de la Ville</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:siteAddress>1 parvis Fernand Braudel 17042 La Rochelle</j.3:siteAddress>
     <j.0:email>master.dcv@univ-lr.fr</j.0:email>
-    <rdfs:label>La Rochelle</rdfs:label>
+    <j.3:classification>Direction de Projets ou Etablissements Culturels</j.3:classification>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F36">
     <j.0:url>http://www.u-bordeaux-montaigne.fr/fr/formations/offre-de-formation-2016-2020/master-XB/arts-arts-du-spectacle-musicologie-ART.3/master-approches-historiques-et-socio-culturelles-du-cinema-et-de-l-audiovisuel-program-mac16-216.html/</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.1:prefLabel>Humanités</j.1:prefLabel>
-    <rdfs:label>Art du spectacle et audiovisuel</rdfs:label>
-    <j.3:name>Pierre Beylot</j.3:name>
-    <rdfs:label>Cinéma et Audiovisuel</rdfs:label>
+    <j.0:region>Pessac</j.0:region>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.2:prefLabel>Humanités</j.2:prefLabel>
+    <j.4:name>Pierre Beylot</j.4:name>
+    <j.3:classification>Art du spectacle et audiovisuel</j.3:classification>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.0:street-address>Département Arts. Université Bordeaux Montaigne</j.0:street-address>
     <j.0:email>Pierre.Beylot@u-bordeaux-montaigne.fr</j.0:email>
-    <rdfs:label>2 mois</rdfs:label>
-    <j.2:unitOf>CLARE 4593</j.2:unitOf>
+    <j.3:unitOf>CLARE 4593</j.3:unitOf>
+    <j.1:dureeStage>2 mois</j.1:dureeStage>
     <j.0:tel>05 57 12 62 12</j.0:tel>
-    <rdfs:label>Approche historiques et socioculturelles du cinéma et de l'audiovisuel</rdfs:label>
-    <j.2:siteAddress>Département Arts. Université Bordeaux Montaigne 33607 Pessac</j.2:siteAddress>
-    <j.2:unitOf>ARTES</j.2:unitOf>
-    <rdfs:label>Bordeaux</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
+    <j.3:classification>Cinéma et Audiovisuel</j.3:classification>
+    <j.3:classification>Approche historiques et socioculturelles du cinéma et de l'audiovisuel</j.3:classification>
+    <j.3:siteAddress>Département Arts. Université Bordeaux Montaigne 33607 Pessac</j.3:siteAddress>
+    <j.3:unitOf>ARTES</j.3:unitOf>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux"/>
+    <j.0:postal-code>33607</j.0:postal-code>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Bordeaux_Montaigne_University"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F14">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.1:informationsComplementaires>Master à distance également</j.1:informationsComplementaires>
+    <j.0:postal-code>86073</j.0:postal-code>
     <j.0:email>vbonnemains@poitiers.iae-france.fr</j.0:email>
-    <j.3:name>Nicolas MOINET</j.3:name>
-    <j.1:prefLabel>IAE</j.1:prefLabel>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <rdfs:label>Intelligence Economique et Communication Stratégique</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:formationContinue>
+    <j.4:name>Nicolas MOINET</j.4:name>
+    <j.2:prefLabel>IAE</j.2:prefLabel>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
+    <j.1:dureeStage>0</j.1:dureeStage>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.0:street-address>20 rue Guillaume VII du Troubadour</j.0:street-address>
     <j.0:tel>05 49 45 41 42</j.0:tel>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Master à distance également</rdfs:label>
+    <j.3:classification>Intelligence Economique et Communication Stratégique</j.3:classification>
+    <j.3:classification>Stratégie et Marketing</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
     <j.0:url>http://iae.univ-poitiers.fr/</j.0:url>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:formationInitiale>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>0</rdfs:label>
-    <rdfs:label>Stratégie et Marketing</rdfs:label>
-    <j.2:siteAddress>20 rue Guillaume VII du Troubadour 86073 Poitiers Cedex 09</j.2:siteAddress>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:siteAddress>20 rue Guillaume VII du Troubadour 86073 Poitiers Cedex 09</j.3:siteAddress>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F8">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>420 h à 560 h</rdfs:label>
-    <rdfs:label>Texte/Image : Littératures, Ecrans, Scènes TEXTIM</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
     <j.0:email>leila.adham@univ-poitiers.fr</j.0:email>
-    <j.0:tel>05 49 45 43 38</j.0:tel>
+    <j.3:classification>Texte/Image : Littératures, Ecrans, Scènes TEXTIM</j.3:classification>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Poitiers</rdfs:label>
-    <j.3:name>Leila Adham</j.3:name>
-    <j.2:unitOf>FORELL</j.2:unitOf>
-    <j.2:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Arts du spectacle</rdfs:label>
-    <rdfs:label>Arts Lettres Langues</rdfs:label>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.0:tel>05 49 45 43 38</j.0:tel>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.4:name>Leila Adham</j.4:name>
+    <j.1:dureeStage>420 h à 560 h</j.1:dureeStage>
+    <j.3:unitOf>FORELL</j.3:unitOf>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:street-address>1 rue Raymond Cantel</j.0:street-address>
+    <j.3:classification>Arts Lettres Langues</j.3:classification>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:classification>Arts du spectacle</j.3:classification>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F26">
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
+    <j.1:dateDebut rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Wed Apr 01 00:00:00 CET 1970</j.1:dateDebut>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Angoulême"/>
+    <j.1:informationsComplementaires>CNAM - ENJMIN</j.1:informationsComplementaires>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratProfessionnalisation>
     <j.0:url>http://www.cnam-enjmin.fr/</j.0:url>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.0:postal-code>16000</j.0:postal-code>
+    <j.3:classification>Audiovisuel, Médias Interactifs Numériques, jeux</j.3:classification>
+    <j.1:serviceStageEmploi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:serviceStageEmploi>
     <j.0:tel>05 45 68 06 78</j.0:tel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.1:prefLabel>Sciences et Technologies</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>4 à 6 mois</rdfs:label>
-    <rdfs:label>CNAM - ENJMIN</rdfs:label>
-    <rdfs:label>Sciences Technologies Santé</rdfs:label>
-    <rdfs:label>1 Avril</rdfs:label>
-    <rdfs:label>6 parcours : game design, programmation, conception visuelle, ergonomie, conception sonore, management de projet</rdfs:label>
-    <rdfs:label>Audiovisuel, Médias Interactifs Numériques, jeux</rdfs:label>
-    <j.2:siteAddress>138 rue de Bordeaux 16000 Angoulême</j.2:siteAddress>
+    <j.0:region>Angoulême</j.0:region>
+    <j.0:street-address>138 rue de Bordeaux</j.0:street-address>
+    <j.1:dureeStage>4 à 6 mois</j.1:dureeStage>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:classification>Sciences Technologies Santé</j.3:classification>
+    <j.2:prefLabel>Sciences et Technologies</j.2:prefLabel>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:classification>6 parcours : game design, programmation, conception visuelle, ergonomie, conception sonore, management de projet</j.3:classification>
+    <j.3:siteAddress>138 rue de Bordeaux 16000 Angoulême</j.3:siteAddress>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:url>http://www.cnam-enjmin.fr/espace-entreprise/offres-de-stage</j.0:url>
-    <rdfs:label>30 Septembre</rdfs:label>
+    <j.1:dateFinObligatoire rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Wed Sep 30 00:00:00 CET 1970</j.1:dateFinObligatoire>
     <j.0:email>Charlène</j.0:email>
-    <rdfs:label>Angoulême</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F38">
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Droit et Science Politique</j.1:prefLabel>
-    <rdfs:label>Droit de la Propriété Intellectuelle</rdfs:label>
+    <j.3:classification>Droit Privé</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Bordeaux_1"/>
+    <j.2:prefLabel>Droit et Science Politique</j.2:prefLabel>
+    <j.0:region>Pessac</j.0:region>
     <j.0:url>http://droit.u-bordeaux.fr/Formations/Masters/Mention-Droit-de-la-propriete-intellectuelle/Master-2-Droit-de-la-propriete-intellectuelle-parcours-MEDIATIC</j.0:url>
-    <rdfs:label>Médiatic</rdfs:label>
-    <rdfs:label>Pessac</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Pessac"/>
+    <j.3:classification>Médiatic</j.3:classification>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:street-address>16 Avenue Léon Duguit</j.0:street-address>
+    <j.0:postal-code>33608</j.0:postal-code>
+    <j.1:typeDeStage>Stage ou Mémoire</j.1:typeDeStage>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Stage ou Mémoire</rdfs:label>
+    <j.3:classification>Droit de la Propriété Intellectuelle</j.3:classification>
     <j.0:tel>05 56 84 85 86 </j.0:tel>
-    <j.2:siteAddress>16 Avenue Léon Duguit 33608 Pessac</j.2:siteAddress>
-    <j.3:name>Xavier Daverat</j.3:name>
-    <rdfs:label>Droit Privé</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.3:siteAddress>16 Avenue Léon Duguit 33608 Pessac</j.3:siteAddress>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.4:name>Xavier Daverat</j.4:name>
     <j.0:email>xavier.daverat@u-bordeaux.fr</j.0:email>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F16">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
-    <j.3:name>David Helbert</j.3:name>
-    <j.2:unitOf>XLIM-SIC</j.2:unitOf>
-    <j.2:siteAddress>9 rue Charles-Claude Chenou 86073 Poitiers Cedex 09</j.2:siteAddress>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:classification>Informatique Mathématiques Multimédia Télécommunication</j.3:classification>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratProfessionnalisation>
+    <j.4:name>David Helbert</j.4:name>
+    <j.3:unitOf>XLIM-SIC</j.3:unitOf>
+    <j.3:siteAddress>9 rue Charles-Claude Chenou 86073 Poitiers Cedex 09</j.3:siteAddress>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>OUI</rdfs:label>
-    <rdfs:label>Sciences Technologies Santé</rdfs:label>
-    <j.1:prefLabel>Sciences Fondamentales et Appliquées</j.1:prefLabel>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.0:street-address>9 rue Charles-Claude Chenou</j.0:street-address>
+    <j.2:prefLabel>Sciences Fondamentales et Appliquées</j.2:prefLabel>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
     <j.0:email>david.helbert@univ-poitiers.fr</j.0:email>
-    <rdfs:label>Informatique Mathématiques Multimédia Télécommunication</rdfs:label>
-    <rdfs:label>Réseaux de Télécommunications Multimédia Automatique</rdfs:label>
+    <j.1:dureeStage>OUI</j.1:dureeStage>
     <j.0:url>http://www.vocasciences.fr/</j.0:url>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:classification>Réseaux de Télécommunications Multimédia Automatique</j.3:classification>
     <j.0:tel>05 49 45 35 73</j.0:tel>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:classification>Sciences Technologies Santé</j.3:classification>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F28">
-    <rdfs:label>La Rochelle</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.0:region>La Rochelle</j.0:region>
+    <j.0:postal-code>17042</j.0:postal-code>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/La_Rochelle"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>20 semaines minimum</rdfs:label>
-    <j.2:siteAddress>Avenue Michel Crépeau 17042 La Rochelle</j.2:siteAddress>
-    <rdfs:label>Sciences Technologies Santé</rdfs:label>
+    <j.3:siteAddress>Avenue Michel Crépeau 17042 La Rochelle</j.3:siteAddress>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:tel>05 46 45 82 59</j.0:tel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.1:dureeStage>20 semaines minimum</j.1:dureeStage>
+    <j.3:classification>Ingénierie des Systèmes d'information</j.3:classification>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.3:classification>Sciences Technologies Santé</j.3:classification>
     <j.0:url>https://formations.univ-larochelle.fr/master-ingenierie-systemes-information</j.0:url>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
-    <rdfs:label>Informatique</rdfs:label>
-    <rdfs:label>Ingénierie des Systèmes d'information</rdfs:label>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_La_Rochelle"/>
     <j.0:email>master.icone@univ-lr.fr</j.0:email>
-    <j.1:prefLabel>Sciences et Technologies</j.1:prefLabel>
+    <j.3:classification>Informatique</j.3:classification>
+    <j.0:street-address>Avenue Michel Crépeau</j.0:street-address>
+    <j.2:prefLabel>Sciences et Technologies</j.2:prefLabel>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:contratApprentissage>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F18">
-    <j.1:prefLabel>Lettres et Langues</j.1:prefLabel>
+    <j.2:prefLabel>Lettres et Langues</j.2:prefLabel>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Entre Février</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <rdfs:label>Littératures</rdfs:label>
-    <rdfs:label>3 à 6 mois</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.3:classification>Littératures</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:classification>Arts Lettres Langues</j.3:classification>
     <j.0:tel>05 49 45 32 18</j.0:tel>
+    <j.3:classification>Livre et Médiations : Edition, commercialisation et vie littéraire</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:url>http://ll.univ-poitiers.fr/masterlivre/</j.0:url>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label>Fin Septembre</rdfs:label>
-    <rdfs:label>Livre et Médiations : Edition, commercialisation et vie littéraire</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:voieRecherche>
+    <j.1:dureeStage>3 à 6 mois</j.1:dureeStage>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
     <j.0:email>stephane.bikialo@univ-poitiers.fr</j.0:email>
-    <j.3:name>Stéphane Bikialo</j.3:name>
-    <j.2:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label>Arts Lettres Langues</rdfs:label>
+    <j.4:name>Stéphane Bikialo</j.4:name>
+    <j.3:siteAddress>1 rue Raymond Cantel 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.0:street-address>1 rue Raymond Cantel</j.0:street-address>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/null">
-    <rdfs:label>6 mois</rdfs:label>
-    <j.2:unitOf>CEREGE</j.2:unitOf>
-    <j.1:prefLabel>Droit et Sciences Sociales</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
+    <j.3:unitOf>CEREGE</j.3:unitOf>
+    <j.0:street-address>20 rue Guillaume VII du Troubadour</j.0:street-address>
     <j.0:email>edwige.garnier@unilim.fr</j.0:email>
-    <rdfs:label>Edition</rdfs:label>
-    <rdfs:label>AES</rdfs:label>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Limoges</rdfs:label>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
+    <j.2:prefLabel>Droit et Sciences Sociales</j.2:prefLabel>
+    <j.3:classification>AES</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Limoges"/>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
     <j.0:url>http://www.univ-poitiers.fr/formation/nos-formations/par-diplome/les-masters/mention-administration-economique-et-sociale-aes-/master-professionnel-et-recherche-droit-economie-gestion-mention-administration-economique-et-sociale-specialte-droit-et-marketing-383691.kjsp?RH=1349295264496</j.0:url>
-    <rdfs:label>Culture et Communication</rdfs:label>
-    <j.2:siteAddress>39E, rue Camille-Guérin 87036 Limoges</j.2:siteAddress>
-    <rdfs:label>http://ensa-limoges.fr/master-ccic/</rdfs:label>
-    <rdfs:label>Université Limoges et l’Etablissement Public Local d’Enseignement et de Formation Professionnelle Agricole (EPLEFPA) d’Ahun</rdfs:label>
-    <j.2:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Limoges"/>
+    <j.1:dateFinObligatoire rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Sat Aug 01 00:00:00 CET 1970</j.1:dateFinObligatoire>
+    <j.3:classification>Edition</j.3:classification>
+    <j.0:street-address>39E, rue Camille-Guérin</j.0:street-address>
+    <j.3:siteAddress>39E, rue Camille-Guérin 87036 Limoges</j.3:siteAddress>
+    <j.0:region>Limoges</j.0:region>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/University_of_Limoges"/>
     <j.0:url>http://formation.cnam.fr/rechercher-par-metier/certificat-de-specialisation-les-tic-technologies-de-l-information-et-de-la-communication-dans-les-systemes-d-information-documentaire-200621.kjsp?RF=newcat_metiers</j.0:url>
+    <j.3:classification>Université Limoges et l’Etablissement Public Local d’Enseignement et de Formation Professionnelle Agricole (EPLEFPA) d’Ahun</j.3:classification>
     <j.0:email>loic.artiaga@unilim.fr</j.0:email>
-    <rdfs:label>Poitiers</rdfs:label>
-    <rdfs:label>Août</rdfs:label>
     <j.0:tel>05 55 43 57 97</j.0:tel>
     <j.0:url>https://ccic.hypotheses.org/a-propos</j.0:url>
     <j.0:email>aleroux@poitiers.iae-france.fr/</j.0:email>
-    <rdfs:label>Droit et Marketing</rdfs:label>
-    <rdfs:label>Valorisation du patrimoine et développement territorial</rdfs:label>
-    <rdfs:label>Certificat de spécialisation (Bac + 4)</rdfs:label>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.0:street-address>2 rue Jean Carbonnier</j.0:street-address>
+    <j.3:classification>Certificat de spécialisation (Bac + 4)</j.3:classification>
     <j.0:tel>05 55 43 55 86</j.0:tel>
-    <rdfs:label>Marketing</rdfs:label>
-    <rdfs:label>CCIC</rdfs:label>
-    <j.1:prefLabel>IAE</j.1:prefLabel>
+    <j.3:classification>Valorisation du patrimoine et développement territorial</j.3:classification>
+    <j.1:informationsComplementaires>http://ensa-limoges.fr/master-ccic/</j.1:informationsComplementaires>
+    <j.2:prefLabel>IAE</j.2:prefLabel>
     <j.0:email>sophie.nivoix@univ-poitiers.fr</j.0:email>
-    <j.1:prefLabel>Lettres et Sciences Humaines</j.1:prefLabel>
-    <rdfs:label>Paris</rdfs:label>
+    <j.3:classification>Lettres et Arts et ENSA Limoges</j.3:classification>
+    <j.2:prefLabel>Lettres et Sciences Humaines</j.2:prefLabel>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.3:name>Sophie Nivoix</j.3:name>
-    <rdfs:label>Lettres et Arts et ENSA Limoges</rdfs:label>
+    <j.4:name>Sophie Nivoix</j.4:name>
     <j.0:tel>05 49 45 41 43</j.0:tel>
-    <rdfs:label>Master 2</rdfs:label>
-    <j.3:name>André Leroux</j.3:name>
-    <rdfs:label>Stratégie et Marketing</rdfs:label>
+    <j.3:classification>CCIC</j.3:classification>
+    <j.4:name>André Leroux</j.4:name>
     <j.0:url>http://iae.univ-poitiers.fr/fr/master-2-marketing</j.0:url>
-    <j.3:name>Loïc Artiaga</j.3:name>
-    <j.2:siteAddress>20 rue Guillaume VII du Troubadour 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label>Création Contemporaine et Industries Culturelles</rdfs:label>
-    <j.2:siteAddress>2 rue Jean Carbonnier 86073 Poitiers Cedex 09</j.2:siteAddress>
+    <j.1:dureeStage>6 mois</j.1:dureeStage>
+    <j.1:dateDebut rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Sun Feb 01 00:00:00 CET 1970</j.1:dateDebut>
+    <j.4:name>Loïc Artiaga</j.4:name>
+    <j.3:classification>Droit et Marketing</j.3:classification>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:classification>TIC (Technologies Information et Communication) dans les systèmes d'information documentaire</j.3:classification>
+    <j.3:classification>Stratégie et Marketing</j.3:classification>
+    <j.3:classification>Création Contemporaine et Industries Culturelles</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Paris"/>
+    <j.3:siteAddress>20 rue Guillaume VII du Troubadour 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.3:classification>Culture et Communication</j.3:classification>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:postal-code>87036</j.0:postal-code>
+    <j.3:siteAddress>2 rue Jean Carbonnier 86073 Poitiers Cedex 09</j.3:siteAddress>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
     <j.0:url>http://www.flsh.unilim.fr/formation/par-niveau-detudes/master-professionnel-edition-2/</j.0:url>
-    <rdfs:label>TIC (Technologies Information et Communication) dans les systèmes d'information documentaire</rdfs:label>
-    <rdfs:label>Février</rdfs:label>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:tel>05 49 45 31 24</j.0:tel>
+    <j.3:classification>Marketing</j.3:classification>
     <j.0:url>http://www.unilim.fr/formation/loffre-de-formation/#/formation/LIM-PROG48894</j.0:url>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F2">
-    <j.3:name>Alexandre Zollinger</j.3:name>
-    <rdfs:label>Magistère</rdfs:label>
-    <j.1:prefLabel>Droit et Sciences Sociales</j.1:prefLabel>
-    <j.2:siteAddress>15 rue Sainte Opportune 86073 Poitiers Cedex 09</j.2:siteAddress>
+    <j.4:name>Alexandre Zollinger</j.4:name>
+    <j.2:prefLabel>Droit et Sciences Sociales</j.2:prefLabel>
+    <j.3:classification>Droit Economie Gestion</j.3:classification>
+    <j.3:siteAddress>15 rue Sainte Opportune 86073 Poitiers Cedex 09</j.3:siteAddress>
     <j.0:url>http://www.magistere.net</j.0:url>
-    <rdfs:label>Droit Economie Gestion</rdfs:label>
-    <j.2:unitOf>CECOJI</j.2:unitOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <rdfs:label>Droit du Patrimoine</rdfs:label>
-    <rdfs:label>Droit des Techniques de l'Information et de la Communication - TIC</rdfs:label>
-    <rdfs:label>Poitiers</rdfs:label>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.3:unitOf>CECOJI</j.3:unitOf>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
+    <j.0:street-address>15 rue Sainte Opportune</j.0:street-address>
+    <j.3:classification>Magistère</j.3:classification>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
     <j.0:tel>05 49 36 64 50</j.0:tel>
+    <j.3:classification>Droit des Techniques de l'Information et de la Communication - TIC</j.3:classification>
+    <j.1:dureeStage>1 à 3 mois</j.1:dureeStage>
     <j.0:email>elisabeth.rebillier@univ-poitiers.fr</j.0:email>
-    <rdfs:label>1 à 3 mois</rdfs:label>
+    <j.3:classification>Droit du Patrimoine</j.3:classification>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F6">
-    <rdfs:label>CREADOC</rdfs:label>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
     <j.0:url>http://sha.univ-poitiers.fr/creadoc/</j.0:url>
-    <rdfs:label>Angoulême</rdfs:label>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>Information et Communication</rdfs:label>
-    <rdfs:label>01 février</rdfs:label>
-    <rdfs:label>Ecriture et Réalisation Documentaires</rdfs:label>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.3:classification>Ecriture et Réalisation Documentaires</j.3:classification>
+    <j.0:postal-code>16000</j.0:postal-code>
+    <j.1:informationsComplementaires>CREADOC</j.1:informationsComplementaires>
     <j.0:tel>05 45 38 65 76</j.0:tel>
-    <j.1:prefLabel>Sciences Humaines et Arts</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.2:siteAddress>121 rue de Bordeaux 16000 Angoulême</j.2:siteAddress>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.1:dureeStage>5 semaines</j.1:dureeStage>
+    <j.1:dateDebut rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >Sun Feb 01 00:00:00 CET 1970</j.1:dateDebut>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Angoulême"/>
+    <j.2:prefLabel>Sciences Humaines et Arts</j.2:prefLabel>
+    <j.3:siteAddress>121 rue de Bordeaux 16000 Angoulême</j.3:siteAddress>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
+    <j.0:street-address>121 rue de Bordeaux</j.0:street-address>
+    <j.3:classification>Information et Communication</j.3:classification>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.0:region>Angoulême</j.0:region>
     <j.0:email>creadoc@univ-poitiers.fr</j.0:email>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>5 semaines</rdfs:label>
-    <j.3:name>Denis Bourgeois</j.3:name>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
+    <j.4:name>Denis Bourgeois</j.4:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://fabricc.univ-poitiers.fr/formation/F4">
-    <rdfs:label>Poitiers</rdfs:label>
+    <j.1:contratProfessionnalisation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratProfessionnalisation>
+    <j.0:region>Poitiers Cedex 09</j.0:region>
     <j.0:tel>05 49 45 49 27</j.0:tel>
-    <j.3:name>David Guillemin</j.3:name>
-    <rdfs:label>Master 2</rdfs:label>
-    <rdfs:label>3 à 6 mois</rdfs:label>
-    <j.2:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.2:siteAddress>
-    <rdfs:label>Information et Communication</rdfs:label>
+    <j.1:dureeStage>3 à 6 mois</j.1:dureeStage>
+    <j.0:postal-code>86073</j.0:postal-code>
+    <j.4:name>David Guillemin</j.4:name>
+    <j.3:classification>ESDOC - Sciences de la Communication</j.3:classification>
+    <j.3:siteAddress>8 rue René Descartes 86073 Poitiers Cedex 09</j.3:siteAddress>
     <j.0:email>david.guillemin@univ.poitiers.fr</j.0:email>
-    <rdfs:label>ESDOC - Sciences de la Communication</rdfs:label>
+    <j.1:formationContinue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationContinue>
+    <j.1:voieRecherche rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:voieRecherche>
+    <j.3:classification>Information et Communication</j.3:classification>
+    <j.3:unitOf rdf:resource="http://dbpedia.org/resource/Poitiers"/>
     <j.0:url>http://sha.univ-poitiers.fr/masteresdoc/</j.0:url>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</rdfs:label>
-    <j.1:prefLabel>Sciences Humaines et Arts</j.1:prefLabel>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</rdfs:label>
+    <j.3:classification>Master 2</j.3:classification>
+    <j.3:classification>Sciences Humaines et Sociales</j.3:classification>
+    <j.2:prefLabel>Sciences Humaines et Arts</j.2:prefLabel>
+    <j.0:street-address>8 rue René Descartes</j.0:street-address>
+    <j.1:formationInitiale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:formationInitiale>
     <j.0:country-name rdf:resource="http://dbpedia.org/resource/France"/>
-    <j.2:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
-    <rdfs:label>Sciences Humaines et Sociales</rdfs:label>
+    <j.1:contratApprentissage rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</j.1:contratApprentissage>
+    <j.3:unitOf rdf:resource="http://fr.dbpedia.org/resource/University_of_Poitiers"/>
   </rdf:Description>
 </rdf:RDF>

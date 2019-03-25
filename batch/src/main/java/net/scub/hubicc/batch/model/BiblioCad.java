@@ -1,8 +1,7 @@
 package net.scub.hubicc.batch.model;
 
-import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvCustomBindByPosition;
-import net.scub.hubicc.batch.tools.csv.StringConverter;
+import net.scub.hubicc.batch.tools.csv.converter.StringConverter;
 
 public class BiblioCad {
 

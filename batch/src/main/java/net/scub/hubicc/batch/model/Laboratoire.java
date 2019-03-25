@@ -1,9 +1,9 @@
 package net.scub.hubicc.batch.model;
 
 import com.opencsv.bean.CsvCustomBindByPosition;
-import net.scub.hubicc.batch.tools.csv.BooleanConverter;
-import net.scub.hubicc.batch.tools.csv.IntegerConverter;
-import net.scub.hubicc.batch.tools.csv.StringConverter;
+import net.scub.hubicc.batch.tools.csv.converter.BooleanConverter;
+import net.scub.hubicc.batch.tools.csv.converter.IntegerConverter;
+import net.scub.hubicc.batch.tools.csv.converter.StringConverter;
 
 public class Laboratoire {
 
