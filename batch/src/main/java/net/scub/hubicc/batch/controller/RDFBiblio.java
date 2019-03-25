@@ -5,6 +5,7 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.sparql.vocabulary.FOAF;
 import org.apache.jena.vocabulary.*;
 import org.springframework.stereotype.Component;
 
@@ -64,7 +65,6 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
 
             addProperty(resource, DCTerms.created, item.getPublicationYear());
             addProperty(resource, DCTerms.creator, item.getAuthor());
-            addProperty(resource, DCTerms.creator, item.getAuthor());
             addProperty(resource, DCTerms.title, item.getTitle());
             addProperty(resource, DCTerms.title, item.getPublicationTitle());
 
@@ -116,9 +116,9 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
             addProperty(resource, unknowProperty(model, "editor"), item.getEditor());
             addProperty(resource, unknowProperty(model, "seriesEditor"), item.getSeriesEditor());
             addProperty(resource, unknowProperty(model, "translator"), item.getTranslator());
-            addProperty(resource, unknowProperty(model, "contributor"), item.getContributor());
+            addProperty(resource, FOAF.name, item.getContributor());
             addProperty(resource, unknowProperty(model, "attorneyAgent"), item.getAttorneyAgent());
-            addProperty(resource, unknowProperty(model, "bookAuthor"), item.getBookAuthor());
+            addProperty(resource, DCTerms.creator, item.getBookAuthor());
             addProperty(resource, unknowProperty(model, "castNumber"), item.getCastMember());
             addProperty(resource, unknowProperty(model, "commenter"), item.getCommenter());
             addProperty(resource, unknowProperty(model, "composer"), item.getComposer());
