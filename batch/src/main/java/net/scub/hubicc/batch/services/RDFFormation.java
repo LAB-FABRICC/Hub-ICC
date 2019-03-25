@@ -1,4 +1,4 @@
-package net.scub.hubicc.batch.controller;
+package net.scub.hubicc.batch.services;
 
 import net.scub.hubicc.batch.model.Formation;
 import org.apache.commons.lang3.StringUtils;

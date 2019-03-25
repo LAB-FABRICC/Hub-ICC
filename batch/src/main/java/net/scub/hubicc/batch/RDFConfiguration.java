@@ -1,8 +1,8 @@
 package net.scub.hubicc.batch;
 
-import net.scub.hubicc.batch.controller.RDFBiblio;
-import net.scub.hubicc.batch.controller.RDFFormation;
-import net.scub.hubicc.batch.controller.RDFLabs;
+import net.scub.hubicc.batch.services.RDFBiblio;
+import net.scub.hubicc.batch.services.RDFFormation;
+import net.scub.hubicc.batch.services.RDFLabs;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;

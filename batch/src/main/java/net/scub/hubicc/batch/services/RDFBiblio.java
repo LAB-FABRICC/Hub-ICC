@@ -1,4 +1,4 @@
-package net.scub.hubicc.batch.controller;
+package net.scub.hubicc.batch.services;
 
 import net.scub.hubicc.batch.model.BiblioCad;
 import org.apache.commons.lang3.tuple.ImmutablePair;
