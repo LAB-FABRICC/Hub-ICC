@@ -4,11 +4,9 @@ import net.scub.hubicc.batch.model.Laboratoire;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
-import org.apache.jena.vocabulary.DC_11;
-import org.apache.jena.vocabulary.ORG;
-import org.apache.jena.vocabulary.SKOS;
-import org.apache.jena.vocabulary.VCARD4;
+import org.apache.jena.vocabulary.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -17,11 +15,6 @@ import java.util.function.Predicate;
 
 @Component
 public class RDFLabs extends AbstractRDF<Laboratoire> {
-
-    @Override
-    protected String getRDFFileName() {
-        return "generatedOwl/rdf-labs";
-    }
 
     @Override
     public Optional<Character> getDelimiter() {
@@ -49,7 +42,7 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
     }
 
     @Override
-    public Consumer<ImmutablePair<Model, Laboratoire>> convertItemToRDF() {
+    public Consumer<ImmutablePair<Model, Laboratoire>> convertItemToRDF(final Resource typeResource) {
         return (ImmutablePair<Model, Laboratoire> pair) -> {
             var model = pair.left;
             var item = pair.right;
@@ -59,6 +52,7 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
 
             var aboutUrl = getICCNamespace() + "labs/";
             var resource = model.createResource(aboutUrl + item.getId());
+            resource.addProperty(RDF.type, typeResource);
 
             // Identité
             addProperty(resource, ORG.classification, item.getChampDeRecherche());
@@ -100,6 +94,8 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
             addProperty(resource, VCARD4.region, item.getCommune());
 
             addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France");
+
+
         };
     }
 

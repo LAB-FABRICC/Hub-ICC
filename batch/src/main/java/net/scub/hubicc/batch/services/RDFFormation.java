@@ -4,11 +4,9 @@ import net.scub.hubicc.batch.model.Formation;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
-import org.apache.jena.vocabulary.DC_11;
-import org.apache.jena.vocabulary.ORG;
-import org.apache.jena.vocabulary.SKOS;
-import org.apache.jena.vocabulary.VCARD4;
+import org.apache.jena.vocabulary.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -17,11 +15,6 @@ import java.util.function.Predicate;
 
 @Component
 public class RDFFormation extends AbstractRDF<Formation> {
-
-    @Override
-    protected String getRDFFileName() {
-        return "generatedOwl/rdf-formations";
-    }
 
     @Override
     public Optional<Character> getDelimiter() {
@@ -49,13 +42,15 @@ public class RDFFormation extends AbstractRDF<Formation> {
     }
 
     @Override
-    public Consumer<ImmutablePair<Model, Formation>> convertItemToRDF() {
+    public Consumer<ImmutablePair<Model, Formation>> convertItemToRDF(final Resource typeResource) {
         return (ImmutablePair<Model, Formation> pair) -> {
             var model = pair.left;
             var item = pair.right;
 
             var aboutUrl = getICCNamespace() + "formation/";
             var resource = model.createResource(aboutUrl + item.getId());
+
+            resource.addProperty(RDF.type, typeResource);
 
             var dboCity = model.createProperty("http://dbpedia.org/ontology/city");
 

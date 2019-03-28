@@ -11,6 +11,7 @@ import org.apache.jena.rdf.model.Resource;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -58,7 +59,7 @@ public abstract class AbstractRDF<T> {
 
     }
 
-    protected String getICCNamespace() {
+    public String getICCNamespace() {
         return "http://fabricc.univ-poitiers.fr/";
     }
 
@@ -81,20 +82,14 @@ public abstract class AbstractRDF<T> {
             resource.addProperty(property, model.createResource(uni));
     }
 
-    private void generateRdf(final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer) throws IOException {
-        var model = ModelFactory.createDefaultModel();
-
+    private void generateRdf(final Model model, final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer) throws IOException {
         CsvBuilder
                 .readCsvFile(csvFilePath, getDelimiter(), csvLineToSkip, getClazz())
                 .stream()
                 .filter(predicateCsv)
                 .map(item -> new ImmutablePair(model, item))
                 .forEach(consumer::accept);
-
-        model.write(new FileWriter(getRDFFileName() + ".owl"));
     }
-
-    protected abstract String getRDFFileName();
 
     public abstract Optional<Character> getDelimiter();
 
@@ -115,7 +110,7 @@ public abstract class AbstractRDF<T> {
 
     protected void addProperty(Resource resource, Property property, Date field) {
         if (field != null)
-            resource.addProperty(property, field.toString(), XSDDatatype.XSDdate);
+            resource.addProperty(property, new SimpleDateFormat("YYYY-MM-dd").format(field), XSDDatatype.XSDdate);
     }
 
 
@@ -146,17 +141,17 @@ public abstract class AbstractRDF<T> {
         return model.createProperty(getICCNamespace() + "#" + propertyName);
     }
 
-    public void export() throws IOException {
+    public void export(final Model model, final Resource typeResource) throws IOException {
         var csvFilePath = getCsvFilePath();
         var csvLineToSkip = getCsvLineToSkip();
 
-        generateRdf(csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF());
+        generateRdf(model, csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF(typeResource));
     }
 
 
     protected abstract Class<T> getClazz();
 
-    public abstract Consumer<ImmutablePair<Model, T>> convertItemToRDF();
+    public abstract Consumer<ImmutablePair<Model, T>> convertItemToRDF(final Resource typeResource);
 
     public abstract int getCsvLineToSkip();
 

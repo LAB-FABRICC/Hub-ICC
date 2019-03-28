@@ -3,9 +3,11 @@ package net.scub.hubicc.batch.services;
 import net.scub.hubicc.batch.model.BiblioCad;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.vocabulary.FOAF;
 import org.apache.jena.vocabulary.DC;
 import org.apache.jena.vocabulary.DCTerms;
+import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.VCARD4;
 import org.springframework.stereotype.Component;
 
@@ -15,11 +17,6 @@ import java.util.function.Predicate;
 
 @Component
 public class RDFBiblio extends AbstractRDF<BiblioCad> {
-
-    @Override
-    protected String getRDFFileName() {
-        return "generatedOwl/rdf-biblio";
-    }
 
     @Override
     public Optional<Character> getDelimiter() {
@@ -47,13 +44,15 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
     }
 
     @Override
-    public Consumer<ImmutablePair<Model, BiblioCad>> convertItemToRDF() {
+    public Consumer<ImmutablePair<Model, BiblioCad>> convertItemToRDF(final Resource typeResource) {
         return (ImmutablePair<Model, BiblioCad> pair) -> {
             var model = pair.left;
             var item = pair.right;
 
             var aboutUrl = getICCNamespace() + "biblio/";
             var resource = model.createResource(aboutUrl + item.getKey());
+
+            resource.addProperty(RDF.type, typeResource);
 
             var biboDoi = model.createProperty("http://purl.org/ontology/bibo/doi");
             var biboEissn = model.createProperty("http://purl.org/ontology/bibo/eIssn");

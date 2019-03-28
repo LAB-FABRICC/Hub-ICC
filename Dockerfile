@@ -21,7 +21,8 @@ ENV DEPS curl
 COPY données/rdf/mypizza.ttl /jena-fuseki/mypizza.ttl
 COPY données/rdf/pizza.owl /jena-fuseki/pizza.owl
 COPY norme/0.1/webSem.owl /jena-fuseki/webSem.owl
-COPY generatedOwl/rdf-labs.owl /jena-fuseki/rdf-labs.owl
+
+COPY generatedOwl/generated.rdf /jena-fuseki/generated.rdf
 
 # Installation
 WORKDIR /tmp
@@ -52,4 +53,4 @@ RUN chmod 755 /jena-fuseki/tdbloader
 # Démarrage du server
 WORKDIR /jena-fuseki
 EXPOSE 3030
-CMD ["/jena-fuseki/fuseki-server", "--file=/jena-fuseki/rdf-labs.owl", "/jena-fuseki"]
+CMD ["/jena-fuseki/fuseki-server", "--file=/jena-fuseki/generated.rdf", "/jena-fuseki"]
