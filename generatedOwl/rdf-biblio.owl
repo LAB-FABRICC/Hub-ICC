@@ -939,7 +939,7 @@
     <j.0:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >Mon Jan 03 00:00:00 CET 2011</j.0:created>
     <j.2:libraryCatalog>Crossref</j.2:libraryCatalog>
-    <j.2:bookAuthor>Mitchell, Ronald; Dino, Richard</j.2:bookAuthor>
+    <j.0:creator>Mitchell, Ronald; Dino, Richard</j.0:creator>
     <j.3:isbn>978-1-84980-763-0</j.3:isbn>
     <j.3:created>2011</j.3:created>
     <j.1:url>http://www.elgaronline.com/view/9781849807623.00024.xml</j.1:url>

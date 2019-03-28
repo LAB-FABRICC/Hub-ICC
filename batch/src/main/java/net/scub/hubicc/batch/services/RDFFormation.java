@@ -4,9 +4,11 @@ import net.scub.hubicc.batch.model.Formation;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Property;
 import org.apache.jena.sparql.vocabulary.FOAF;
-import org.apache.jena.vocabulary.*;
+import org.apache.jena.vocabulary.DC_11;
+import org.apache.jena.vocabulary.ORG;
+import org.apache.jena.vocabulary.SKOS;
+import org.apache.jena.vocabulary.VCARD4;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -55,7 +57,7 @@ public class RDFFormation extends AbstractRDF<Formation> {
             var aboutUrl = getICCNamespace() + "formation/";
             var resource = model.createResource(aboutUrl + item.getId());
 
-            final Property dboCity = model.createProperty("http://dbpedia.org/ontology/city");
+            var dboCity = model.createProperty("http://dbpedia.org/ontology/city");
 
             getUniversityResource(item.getUniversity()).forEach(uni -> addResource(model, resource, ORG.unitOf, uni));
 
