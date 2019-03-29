@@ -6,7 +6,6 @@ cd batch;
 mvn clean install;
 
 ## generate rdf file
-cd target/classes;
-java net.scub.hubicc.batch.RDFMain;
+mvn  spring-boot:run
 
-cd ../../..;
+cd ..;

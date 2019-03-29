@@ -8,11 +8,11 @@ services:
 # Environment variables :
 
 # Docker auth
-# - User: DOCKER_USER
+# - User: $DOCKER_USERNAME
 # - Password: DOCKER_PASSWORD
 
 before_install:
-  - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   
 script:
   - sh ./scripts/build.sh
