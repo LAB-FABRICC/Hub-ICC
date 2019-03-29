@@ -22,7 +22,7 @@ COPY données/rdf/mypizza.ttl /jena-fuseki/mypizza.ttl
 COPY données/rdf/pizza.owl /jena-fuseki/pizza.owl
 COPY norme/0.1/webSem.owl /jena-fuseki/webSem.owl
 
-COPY generatedOwl/generated.rdf /jena-fuseki/generated.rdf
+COPY batch/target/generated.rdf /jena-fuseki/generated.rdf
 
 # Installation
 WORKDIR /tmp
