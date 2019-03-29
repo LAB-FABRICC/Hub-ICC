@@ -2,6 +2,9 @@ language: java
 sudo: true
 jdk: oraclejdk11
 
+services:
+  - docker
+
 # Environment variables :
 
 # Docker auth
