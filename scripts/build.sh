@@ -8,4 +8,6 @@ mvn clean install;
 ## generate rdf file
 mvn  spring-boot:run
 
+mv target/generated.rdf ../generatedOwl/generated.rdf
+
 cd ..;
