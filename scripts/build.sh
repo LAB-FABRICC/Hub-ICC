@@ -9,4 +9,4 @@ mvn clean install;
 cd target/classes;
 java net.scub.hubicc.batch.RDFMain;
 
-cd ../..;
+cd ../../..;
