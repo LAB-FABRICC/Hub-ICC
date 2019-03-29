@@ -18,5 +18,5 @@ script:
   - sh ./scripts/build.sh
   
 after_success:
-  - docker build . -t $DOCKER_USERNAME/rdf
-  - docker push $DOCKER_USERNAME/rdf
+  - docker build . -t $DOCKER_USERNAME/sparql
+  - docker push $DOCKER_USERNAME/sparql
