@@ -5,7 +5,6 @@ import net.scub.hubicc.batch.services.RDFFormation;
 import net.scub.hubicc.batch.services.RDFLabs;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.vocabulary.RDF;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;

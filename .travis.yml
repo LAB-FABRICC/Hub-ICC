@@ -11,7 +11,8 @@ jdk: oraclejdk11
 before_install:
   - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
   
-script: "cd batch && mvn install && java -cp src.main.java.net.scub.hubicc.batch.RDFMain"
+script:
+  - sh ./scripts/build.sh
   
 after_success:
   - docker build . -t $DOCKER_USERNAME/rdf

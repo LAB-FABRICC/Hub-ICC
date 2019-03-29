@@ -7,9 +7,12 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class RDFMain {
 
-  public static final main(String args...) {
+  public static final void main(String... args) throws IOException {
     var model = ModelFactory.createDefaultModel();
 
     var rdfLabs = new RDFLabs();
