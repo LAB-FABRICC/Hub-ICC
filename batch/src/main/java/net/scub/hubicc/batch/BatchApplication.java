@@ -35,6 +35,6 @@ public class BatchApplication implements CommandLineRunner {
         rdfBiblio.export(model, resourceBiblio);
         rdfFormation.export(model, resourceFormation);
 
-        model.write(new FileWriter("generatedOwl/generated.rdf"));
+        model.write(new FileWriter("target/generated.rdf"));
     }
 }
