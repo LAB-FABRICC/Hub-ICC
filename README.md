@@ -21,3 +21,24 @@ L'application est ensuite disponible à l'adresse [http://localhost:3030/](http:
 * [RDF Schema ou RDFS](https://fr.wikipedia.org/wiki/RDF_Schema) est un langage fournissant de quoi hiérarchiser des classes et propriétés ou encore de définir des ontologies.
 * [Web Ontology Language](https://fr.wikipedia.org/wiki/Web_Ontology_Language) ou (OWL) est une extension du RDFS.
 * [SPARQL](https://fr.wikipedia.org/wiki/SPARQL) : Equivalent du SQL mais pensé par le W3C afin d'assurer l'interopérabilité des données du web.
+
+
+## Run with docker
+
+```bash
+cd batch;
+```
+
+### build
+
+```bash
+docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn clean install
+```
+
+### run
+
+```bash
+docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn spring-boot:run
+```
+
+La création des fichiers owl se fait au démarrage du projet. Ils sont générés dans le répertoire à la racine `generatedOwl`

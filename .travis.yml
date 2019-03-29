@@ -1,0 +1,22 @@
+language: java
+sudo: true
+jdk: oraclejdk11
+
+services:
+  - docker
+
+# Environment variables :
+
+# Docker auth
+# - User: DOCKER_USER
+# - Password: DOCKER_PASSWORD
+
+before_install:
+  - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+  
+script:
+  - sh ./scripts/build.sh
+  
+after_success:
+  - docker build . -t $DOCKER_USERNAME/rdf
+  - docker push $DOCKER_USERNAME/rdf
