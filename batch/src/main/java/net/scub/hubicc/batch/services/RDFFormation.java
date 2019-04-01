@@ -44,15 +44,15 @@ public class RDFFormation extends AbstractRDF<Formation> {
     @Override
     public Consumer<ImmutablePair<Model, Formation>> convertItemToRDF(final Resource typeResource) {
         return (ImmutablePair<Model, Formation> pair) -> {
-            var model = pair.left;
-            var item = pair.right;
+            final var model = pair.left;
+            final var item = pair.right;
 
-            var aboutUrl = getICCNamespace() + "formation/";
-            var resource = model.createResource(aboutUrl + item.getId());
+            final var aboutUrl = getICCNamespace() + "formation/";
+            final var resource = model.createResource(aboutUrl + item.getId());
 
             resource.addProperty(RDF.type, typeResource);
 
-            var dboCity = model.createProperty("http://dbpedia.org/ontology/city");
+            final var dboCity = model.createProperty("http://dbpedia.org/ontology/city");
 
             getUniversityResource(item.getUniversity()).forEach(uni -> addResource(model, resource, ORG.unitOf, uni));
 
@@ -66,11 +66,11 @@ public class RDFFormation extends AbstractRDF<Formation> {
 
             getCityResource(item.getLieuFormation()).forEach(uni -> addResource(model, resource, dboCity, uni));
 
-            var propertyFormationInitiale = unknowProperty(model, "formationInitiale");
-            var propertyFormationContinue = unknowProperty(model, "formationContinue");
-            var propertyContratApprentissage = unknowProperty(model, "contratApprentissage");
-            var propertyContratProfessionnalisation = unknowProperty(model, "contratProfessionnalisation");
-            var propertyVoieRecherche = unknowProperty(model, "voieRecherche");
+            final var propertyFormationInitiale = unknowProperty(model, "formationInitiale");
+            final var propertyFormationContinue = unknowProperty(model, "formationContinue");
+            final var propertyContratApprentissage = unknowProperty(model, "contratApprentissage");
+            final var propertyContratProfessionnalisation = unknowProperty(model, "contratProfessionnalisation");
+            final var propertyVoieRecherche = unknowProperty(model, "voieRecherche");
 
             addProperty(resource, propertyFormationInitiale, item.getFormationInitiale()); // TODO
             addProperty(resource, propertyFormationContinue, item.getFormationContinue()); // TODO
@@ -78,11 +78,11 @@ public class RDFFormation extends AbstractRDF<Formation> {
             addProperty(resource, propertyContratProfessionnalisation, item.getContratProfessionnalisation()); // TODO
             addProperty(resource, propertyVoieRecherche, item.getVoieRecherche()); // TODO
 
-            var propertyTypeDeStage = unknowProperty(model, "typeDeStage");
-            var propertyDureeStage = unknowProperty(model, "dureeStage");
-            var propertyDateDebut = unknowProperty(model, "dateDebut");
-            var propertyDateFinObligatoire = unknowProperty(model, "dateFinObligatoire");
-            var propertyServiceStageEmploi = unknowProperty(model, "serviceStageEmploi");
+            final var propertyTypeDeStage = unknowProperty(model, "typeDeStage");
+            final var propertyDureeStage = unknowProperty(model, "dureeStage");
+            final var propertyDateDebut = unknowProperty(model, "dateDebut");
+            final var propertyDateFinObligatoire = unknowProperty(model, "dateFinObligatoire");
+            final var propertyServiceStageEmploi = unknowProperty(model, "serviceStageEmploi");
 
             addProperty(resource, propertyTypeDeStage, item.getTypeDeStage()); // TODO
             addProperty(resource, propertyDureeStage, item.getDureeStage()); // TODO
@@ -113,7 +113,7 @@ public class RDFFormation extends AbstractRDF<Formation> {
             addProperty(resource, ORG.unitOf, item.getRattachementLaboratoire2());
             addProperty(resource, ORG.unitOf, item.getRattachementLaboratoire3());
 
-            var propertyInformationsComplementaires = unknowProperty(model, "informationsComplementaires");
+            final var propertyInformationsComplementaires = unknowProperty(model, "informationsComplementaires");
 
             addProperty(resource, propertyInformationsComplementaires, item.getInformationsComplementaires()); // TODO
 

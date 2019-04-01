@@ -46,18 +46,18 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
     @Override
     public Consumer<ImmutablePair<Model, BiblioCad>> convertItemToRDF(final Resource typeResource) {
         return (ImmutablePair<Model, BiblioCad> pair) -> {
-            var model = pair.left;
-            var item = pair.right;
+            final var model = pair.left;
+            final var item = pair.right;
 
-            var aboutUrl = getICCNamespace() + "biblio/";
-            var resource = model.createResource(aboutUrl + item.getKey());
+            final var aboutUrl = getICCNamespace() + "biblio/";
+            final var resource = model.createResource(aboutUrl + item.getKey());
 
             resource.addProperty(RDF.type, typeResource);
 
-            var biboDoi = model.createProperty("http://purl.org/ontology/bibo/doi");
-            var biboEissn = model.createProperty("http://purl.org/ontology/bibo/eIssn");
-            var biboIsbn = model.createProperty("http://purl.org/ontology/bibo/isbn");
-            var biboCreated = model.createProperty("http://purl.org/ontology/bibo/created");
+            final var biboDoi = model.createProperty("http://purl.org/ontology/bibo/doi");
+            final var biboEissn = model.createProperty("http://purl.org/ontology/bibo/eIssn");
+            final var biboIsbn = model.createProperty("http://purl.org/ontology/bibo/isbn");
+            final var biboCreated = model.createProperty("http://purl.org/ontology/bibo/created");
 
             addProperty(resource, DC.identifier, item.getKey());
             addProperty(resource, DCTerms.type, item.getItemType());

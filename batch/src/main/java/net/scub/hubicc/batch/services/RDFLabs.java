@@ -44,14 +44,14 @@ public class RDFLabs extends AbstractRDF<Laboratoire> {
     @Override
     public Consumer<ImmutablePair<Model, Laboratoire>> convertItemToRDF(final Resource typeResource) {
         return (ImmutablePair<Model, Laboratoire> pair) -> {
-            var model = pair.left;
-            var item = pair.right;
+            final var model = pair.left;
+            final var item = pair.right;
 
-            var propertyNombreChercheurs = unknowProperty(model, "nombreChercheurs");
-            var propertyAssociationCnrs = unknowProperty(model, "associationCnrs");
+            final var propertyNombreChercheurs = unknowProperty(model, "nombreChercheurs");
+            final var propertyAssociationCnrs = unknowProperty(model, "associationCnrs");
 
-            var aboutUrl = getICCNamespace() + "labs/";
-            var resource = model.createResource(aboutUrl + item.getId());
+            final var aboutUrl = getICCNamespace() + "labs/";
+            final var resource = model.createResource(aboutUrl + item.getId());
             resource.addProperty(RDF.type, typeResource);
 
             // Identité

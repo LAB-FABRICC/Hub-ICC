@@ -60,7 +60,7 @@ public abstract class AbstractRDF<T> {
     }
 
     public String getICCNamespace() {
-        return "http://fabricc.univ-poitiers.fr/";
+        return "http://fabricc.univ-poitiers.fr/def/";
     }
 
     protected String formatAddress(String adresse, String codePostal, String commune) {
@@ -127,7 +127,7 @@ public abstract class AbstractRDF<T> {
             return new ArrayList<>();
         }
 
-        final String tmpCity = city.trim().toLowerCase();
+        final var tmpCity = city.trim().toLowerCase();
 
         if (mapCity.containsKey(tmpCity)) {
             return mapCity.get(tmpCity);
@@ -142,8 +142,8 @@ public abstract class AbstractRDF<T> {
     }
 
     public void export(final Model model, final Resource typeResource) throws IOException {
-        var csvFilePath = getCsvFilePath();
-        var csvLineToSkip = getCsvLineToSkip();
+        final var csvFilePath = getCsvFilePath();
+        final var csvLineToSkip = getCsvLineToSkip();
 
         generateRdf(model, csvFilePath, csvLineToSkip, predicateExcludeItem(), convertItemToRDF(typeResource));
     }
