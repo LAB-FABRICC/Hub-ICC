@@ -1,19 +1,20 @@
 package net.scub.hubicc.batch.services;
 
+import net.scub.hubicc.batch.model.HtmlItem;
 import net.scub.hubicc.batch.tools.csv.CsvBuilder;
+import net.scub.hubicc.batch.tools.thymeleaf.ThymeleafBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -24,10 +25,15 @@ public abstract class AbstractRDF<T> {
     private final Map<String, List<String>> mapUniversity;
     private final Map<String, List<String>> mapCity;
 
+    private final ThymeleafBuilder thymeleafBuilder;
+
     /**
      * Constructor.
+     *
+     * @param thymeleafBuilder
      */
-    public AbstractRDF() {
+    public AbstractRDF(ThymeleafBuilder thymeleafBuilder) {
+        this.thymeleafBuilder = thymeleafBuilder;
         this.mapCity = new HashMap<>();
 
         this.mapCity.put("angoulême", List.of("http://dbpedia.org/resource/Angoulême"));
@@ -38,7 +44,7 @@ public abstract class AbstractRDF<T> {
         this.mapCity.put("bordeaux", List.of("http://dbpedia.org/resource/Bordeaux"));
         this.mapCity.put("pessac", List.of("http://dbpedia.org/resource/Pessac"));
         this.mapCity.put("pau", List.of("http://dbpedia.org/resource/Pau"));
-        
+
         this.mapUniversity = new HashMap<>();
         final String poitiers = "http://fr.dbpedia.org/resource/University_of_Poitiers";
         final String laRochelle = "http://dbpedia.org/resource/University_of_La_Rochelle";
@@ -77,40 +83,82 @@ public abstract class AbstractRDF<T> {
     }
 
 
-    protected void addResource(Model model, Resource resource, Property property, String uni) {
-        if (StringUtils.isNotEmpty(uni))
+    protected HtmlItem addResource(Model model, Resource resource, Property property, String uni) {
+        if (StringUtils.isNotEmpty(uni)) {
             resource.addProperty(property, model.createResource(uni));
+            return new HtmlItem(property.getNameSpace() + property.getLocalName(), uni);
+        }
+
+        return null;
     }
 
-    private void generateRdf(final Model model, final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Consumer<ImmutablePair<Model, T>> consumer) throws IOException {
+    private void generateRdf(final Model model, final String csvFilePath, final int csvLineToSkip, final Predicate<T> predicateCsv, final Function<ImmutablePair<Model, T>, ImmutablePair<String, List<HtmlItem>>> consumer) throws IOException {
         CsvBuilder
                 .readCsvFile(csvFilePath, getDelimiter(), csvLineToSkip, getClazz())
                 .stream()
                 .filter(predicateCsv)
                 .map(item -> new ImmutablePair(model, item))
-                .forEach(consumer::accept);
+                .map(pair -> (ImmutablePair<String, List<HtmlItem>>) consumer.apply(pair))
+                .forEach(pair -> {
+                    final var aboutUrlId = pair.left;
+                    final String template = thymeleafBuilder.buildTemplate(aboutUrlId, pair.right);
+
+                    final String fileName = aboutUrlId.substring(aboutUrlId.lastIndexOf("/"));
+
+                    try {
+                        final var file = new File("target/" + getHtmlFilePath() );
+                        file.mkdirs();
+
+                        var fileWriter = new FileWriter("target/" + getHtmlFilePath() + fileName);
+                        fileWriter.write(template);
+
+                        fileWriter.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
     }
 
     public abstract Optional<Character> getDelimiter();
 
-    protected void addProperty(Resource resource, Property property, String field) {
-        if (StringUtils.isNotEmpty(field))
+    protected HtmlItem addProperty(Resource resource, Property property, String field) {
+        if (StringUtils.isNotEmpty(field)) {
             resource.addProperty(property, field.trim());
+
+            return new HtmlItem(property.getNameSpace() + property.getLocalName(), field.trim());
+        }
+
+        return null;
     }
 
-    protected void addProperty(Resource resource, Property property, Boolean field) {
-        if (field != null)
+    protected HtmlItem addProperty(Resource resource, Property property, Boolean field) {
+        if (field != null) {
             resource.addProperty(property, field.toString(), XSDDatatype.XSDboolean);
+
+            return new HtmlItem(property.getNameSpace() + property.getLocalName(), field.toString());
+        }
+
+        return null;
     }
 
-    protected void addProperty(Resource resource, Property property, Integer field) {
-        if (field != null)
+    protected HtmlItem addProperty(Resource resource, Property property, Integer field) {
+        if (field != null) {
             resource.addProperty(property, field.toString(), XSDDatatype.XSDinteger);
+
+            return new HtmlItem(property.getNameSpace() + property.getLocalName(), field.toString());
+        }
+
+        return null;
     }
 
-    protected void addProperty(Resource resource, Property property, Date field) {
-        if (field != null)
-            resource.addProperty(property, new SimpleDateFormat("YYYY-MM-dd").format(field), XSDDatatype.XSDdate);
+    protected HtmlItem addProperty(Resource resource, Property property, Date field) {
+        if (field != null) {
+            final var dateFormated = new SimpleDateFormat("YYYY-MM-dd").format(field);
+            resource.addProperty(property, dateFormated, XSDDatatype.XSDdate);
+            return new HtmlItem(property.getNameSpace() + property.getLocalName(), dateFormated);
+        }
+
+        return null;
     }
 
 
@@ -151,11 +199,13 @@ public abstract class AbstractRDF<T> {
 
     protected abstract Class<T> getClazz();
 
-    public abstract Consumer<ImmutablePair<Model, T>> convertItemToRDF(final Resource typeResource);
+    public abstract Function<ImmutablePair<Model, T>, ImmutablePair<String, List<HtmlItem>>> convertItemToRDF(final Resource typeResource);
 
     public abstract int getCsvLineToSkip();
 
     public abstract String getCsvFilePath();
 
     public abstract Predicate<T> predicateExcludeItem();
+
+    public abstract String getHtmlFilePath();
 }
