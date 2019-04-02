@@ -16,8 +16,8 @@
         </thead>
         <tbody>
             <tr th:each="item : ${htmlItems}">
-                <td><a th:href="${item.relation}" th:text="${item.relation}"></a></td>
-                <td th:if="${item.isLink()}"><a th:href="${item.object}" th:text="${item.object}"></a></td>
+                <td><a target="_blank" th:href="${item.relation}" th:text="${item.relation}"></a></td>
+                <td th:if="${item.isLink()}"><a target="_blank" th:href="${item.object}" th:text="${item.object}"></a></td>
                 <td th:if="${!item.isLink()}" th:text="${item.object}"></td>
             </tr>
         </tbody>
