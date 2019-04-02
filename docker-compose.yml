@@ -1,0 +1,12 @@
+version: '2'
+services:
+  fuseki:
+    image: scubicc/sparql:latest
+    ports:
+    - "3030:3030"
+  apache:
+    image: httpd:latest
+    volumes:
+    - ./batch/target/html:/usr/local/apache2/htdocs/def
+    ports:
+    - "80:80"
