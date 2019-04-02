@@ -89,3 +89,30 @@ fabric.properties
 .idea/
 Hub-ICC.iml
 
+/target/
+
+/batch/target/
+/batch/.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+/batch/.apt_generated
+/batch/.classpath
+/batch/.factorypath
+/batch/.project
+/batch/.settings
+/batch/.springBeans
+/batch/.sts4-cache
+
+### IntelliJ IDEA ###
+/batch/.idea
+/batch/*.iws
+/batch/*.iml
+/batch/*.ipr
+
+### NetBeans ###
+/batch/nbproject/private/
+/batch/build/
+/batch/nbbuild/
+/batch/dist/
+/batch/nbdist/
+/batch/.nb-gradle/

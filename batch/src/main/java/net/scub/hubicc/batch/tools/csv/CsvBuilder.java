@@ -30,8 +30,8 @@ public final class CsvBuilder {
      * @throws IOException exception
      */
     public static <T> List<T> readCsvFile(final String path, final Optional<Character> maybeDelimiter, final int lineToSkip, Class<T> clazz) throws IOException {
-        var classPathResource = new ClassPathResource(path);
-        var reader = Files.newBufferedReader(Paths.get(classPathResource.getURI()));
+        final var classPathResource = new ClassPathResource(path);
+        final var reader = Files.newBufferedReader(Paths.get(classPathResource.getURI()));
         return new CsvToBeanBuilder(reader)
                 .withType(clazz)
                 .withSkipLines(lineToSkip)
