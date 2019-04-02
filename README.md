@@ -25,19 +25,31 @@ L'application est ensuite disponible à l'adresse [http://localhost:3030/](http:
 
 ## LOCAL 
 
+On descend dans le projet spring-boot : 
+
+```bash
+cd batch;
+```
+
 ### Compilation
 
 ```bash
-docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn clean install -f batch/pom.xml
+docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn clean install
 ```
 
 ### Génération du fichier rdf
 
 ```bash
-docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn spring-boot:run -f batch/pom.xml
+docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn spring-boot:run
 ```
 
 La création du fichier RDF se fait au démarrage du projet via un command line runner et se trouve dans dans le dossier target/generated.rdf.
+
+On retourne ensuite à la racine du projet :
+
+```bash
+cd ..
+```
 
 ### Création de l'image docker
 
@@ -108,6 +120,5 @@ Vous pouvez la démarrer via la commande suivante :
 ```bash
 docker run -p 3030:3030 scubicc/sparql:latest
 ```
-
 
 
