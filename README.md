@@ -23,22 +23,91 @@ L'application est ensuite disponible à l'adresse [http://localhost:3030/](http:
 * [SPARQL](https://fr.wikipedia.org/wiki/SPARQL) : Equivalent du SQL mais pensé par le W3C afin d'assurer l'interopérabilité des données du web.
 
 
-## Run with docker
+## LOCAL 
+
+### Compilation
 
 ```bash
-cd batch;
+docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn clean install -f batch/pom.xml
 ```
 
-### build
+### Génération du fichier rdf
 
 ```bash
-docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn clean install
+docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn spring-boot:run -f batch/pom.xml
 ```
 
-### run
+La création du fichier RDF se fait au démarrage du projet via un command line runner et se trouve dans dans le dossier target/generated.rdf.
+
+### Création de l'image docker
 
 ```bash
-docker run -it --rm --name hub-icc -v "/tmp/hub-icc/.m2:/root/.m2" -v "$(pwd)":/usr/src/3-jdk-11-slim -w /usr/src/3-jdk-11-slim maven:3-jdk-11-slim mvn spring-boot:run
+docker build -t scubicc/sparql
 ```
 
-La création des fichiers owl se fait au démarrage du projet. Ils sont générés dans le répertoire à la racine `generatedOwl`
+### Démarrage de l'image docker en local 
+
+```bash
+docker run -p 3030:3030 scubicc/sparql
+```
+
+### Configuration apache en attendant la mise en place coté fabricc
+
+création d'un fichier de conf "fabricc.univ-poitiers.fr.conf" dans le dossier /etc/apache2/sites-availables
+
+```bash
+#Handle call to fabricc.univ-poitiers.fr 
+<VirtualHost *:80>
+	ServerName fabricc.univ-poitiers.fr
+	DocumentRoot "/var/www/fabricc.univ-poitiers"
+	<Directory "/var/www/fabricc.univ-poitiers">
+		Options FollowSymLinks
+		AllowOverride all
+		Require all granted
+	</Directory>
+	ErrorLog /var/log/apache2/error.fabricc.univ-poitiers.log
+	CustomLog /var/log/apache2/access.fabricc.univ-poitiers.log combined
+</VirtualHost>
+```
+
+création du dossier permettant d'accès aux fichiers html générés lors du démarrage du projet.
+
+```bash
+sudo mkdir -p /var/www/fabricc.univ-poitiers
+```
+
+déplacement des sources htmls dans le dossier cible
+
+```bash 
+sudo rm -rf /var/www/fabricc.univ-poitiers/def;
+sudo cp -R target/html /var/www/fabricc.univ-poitiers/def;
+```
+
+déclarer le site comme opérationnel 
+
+```bash 
+sudo a2ensite fabricc.univ-poitiers.fr;
+sudo systemctl reload apache2;
+```
+
+modification du fichier /etc/hosts pour prendre en compte l'url : 
+
+```bash
+## Fabricc 
+127.0.0.1	fabricc.univ-poitiers.fr
+```
+
+## SERVER
+
+### Déploiement sur le repository Docker public
+
+L'image docker est publié automatiquement lors d'un push sur la branche.
+
+Vous pouvez la démarrer via la commande suivante :
+
+```bash
+docker run -p 3030:3030 scubicc/sparql:latest
+```
+
+
+
