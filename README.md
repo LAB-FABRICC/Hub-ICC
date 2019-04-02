@@ -65,49 +65,19 @@ docker run -p 3030:3030 scubicc/sparql
 
 ### Configuration apache en attendant la mise en place coté fabricc
 
-création d'un fichier de conf "fabricc.univ-poitiers.fr.conf" dans le dossier /etc/apache2/sites-availables
-
-```bash
-#Handle call to fabricc.univ-poitiers.fr 
-<VirtualHost *:80>
-	ServerName fabricc.univ-poitiers.fr
-	DocumentRoot "/var/www/fabricc.univ-poitiers"
-	<Directory "/var/www/fabricc.univ-poitiers">
-		Options FollowSymLinks
-		AllowOverride all
-		Require all granted
-	</Directory>
-	ErrorLog /var/log/apache2/error.fabricc.univ-poitiers.log
-	CustomLog /var/log/apache2/access.fabricc.univ-poitiers.log combined
-</VirtualHost>
-```
-
-création du dossier permettant d'accès aux fichiers html générés lors du démarrage du projet.
-
-```bash
-sudo mkdir -p /var/www/fabricc.univ-poitiers
-```
-
-déplacement des sources htmls dans le dossier cible
-
-```bash 
-sudo rm -rf /var/www/fabricc.univ-poitiers/def;
-sudo cp -R target/html /var/www/fabricc.univ-poitiers/def;
-```
-
-déclarer le site comme opérationnel 
-
-```bash 
-sudo a2ensite fabricc.univ-poitiers.fr;
-sudo systemctl reload apache2;
-```
-
 modification du fichier /etc/hosts pour prendre en compte l'url : 
 
 ```bash
 ## Fabricc 
 127.0.0.1	fabricc.univ-poitiers.fr
 ```
+
+```bash
+docker-compose up
+```
+
+fuseki est accessible à l'adresse : http://localhost:3030
+
 
 ## SERVER
 
@@ -120,6 +90,5 @@ Vous pouvez la démarrer via la commande suivante :
 ```bash
 docker run -p 3030:3030 scubicc/sparql:latest
 ```
-
 
 
