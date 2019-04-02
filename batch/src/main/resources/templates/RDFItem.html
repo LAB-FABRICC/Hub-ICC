@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all" th:text="${aboutUrlId}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <h1 th:text="${aboutUrlId}"></h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Relation</th>
+                <th>Object</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${htmlItems}">
+                <td><a th:href="${item.relation}" th:text="${item.relation}"></a></td>
+                <td th:if="${item.isLink()}"><a th:href="${item.object}" th:text="${item.object}"></a></td>
+                <td th:if="${!item.isLink()}" th:text="${item.object}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
