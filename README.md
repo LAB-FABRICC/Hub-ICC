@@ -54,7 +54,7 @@ cd ..
 ### Création de l'image docker
 
 ```bash
-docker build -t scubicc/sparql
+docker build -t scubicc/sparql .
 ```
 
 ### Démarrage de l'image docker en local 
