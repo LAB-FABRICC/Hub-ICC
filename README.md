@@ -78,6 +78,14 @@ docker-compose up
 
 fuseki est accessible à l'adresse : http://localhost:3030
 
+ou en mode dev pour regénérer l'image (attention vous devez avoir lancer un mvn `spring-boot:run` afin de générer le fichier rdf) : 
+
+```bash
+docker-compose -f docker-compose.dev.yml up --build
+```
+
+fuseki est accessible à l'adresse : http://localhost:3030
+
 
 ## SERVER
 
