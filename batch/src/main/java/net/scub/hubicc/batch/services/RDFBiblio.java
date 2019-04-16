@@ -37,7 +37,7 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
 
     @Override
     public Optional<Character> getDelimiter() {
-        return Optional.of(',');
+        return Optional.of(';');
     }
 
     @Override
@@ -95,92 +95,12 @@ public class RDFBiblio extends AbstractRDF<BiblioCad> {
             tmpHtmlItems.add(addProperty(resource, biboDoi, item.getDOI()));
 
             tmpHtmlItems.add(addProperty(resource, VCARD4.url, item.getUrl()));
-
             tmpHtmlItems.add(addProperty(resource, DCTerms.abstract_, item.getAbstractNote()));
-
             tmpHtmlItems.add(addProperty(resource, biboCreated, item.getDate()));
-
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "dateAdded"), item.getDateAdded())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "dateModified"), item.getDateModified())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "accessDate"), item.getAccessDate())); // TODO 
-
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "pages"), item.getPages())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "numPages"), item.getNumPages())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "issue"), item.getIssue())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "volume"), item.getVolume())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "numberOfVolumes"), item.getNumberOfVolumes())); // TODO 
-
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "journalAbbreviation"), item.getJournalAbbreviation())); // TODO 
-
             tmpHtmlItems.add(addProperty(resource, DCTerms.alternative, item.getShortTitle()));
-
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "series"), item.getSeries())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "seriesNumber"), item.getSeriesNumber())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "seriesText"), item.getSeriesText())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "seriesTitle"), item.getSeriesTitle())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "publisher"), item.getPublisher())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "place"), item.getPlace())); // TODO 
-
             tmpHtmlItems.add(addProperty(resource, DCTerms.language, item.getLanguage()));
-
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "rights"), item.getRights())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "type"), item.getType())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "archive"), item.getArchive())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "archiveLocation"), item.getArchiveLocation())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "libraryCatalog"), item.getLibraryCatalog())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "callNumber"), item.getCallNumber())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "extra"), item.getExtra())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "notes"), item.getNotes())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "fileAttachments"), item.getFileAttachments())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "linkAttachments"), item.getLinkAttachments())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "manualTags"), item.getManualTags())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "automaticTags"), item.getAutomaticTags())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "editor"), item.getEditor())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "seriesEditor"), item.getSeriesEditor())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "translator"), item.getTranslator())); // TODO 
             tmpHtmlItems.add(addProperty(resource, FOAF.name, item.getContributor()));
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "attorneyAgent"), item.getAttorneyAgent())); // TODO
             tmpHtmlItems.add(addProperty(resource, DCTerms.creator, item.getBookAuthor()));
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "castNumber"), item.getCastMember())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "commenter"), item.getCommenter())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "composer"), item.getComposer())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "cosponsor"), item.getCosponsor())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "counsel"), item.getCounsel())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "interviewer"), item.getInterviewer())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "producer"), item.getProducer())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "recipient"), item.getRecipient())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "reviewedAuthor"), item.getReviewedAuthor())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "scriptWriter"), item.getScriptwriter())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "wordsBy"), item.getWordsBy())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "guest"), item.getGuest())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "number"), item.getNumber())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "edition"), item.getEdition())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "runningTime"), item.getRunningTime())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "scale"), item.getScale())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "medium"), item.getMedium())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "artworkSize"), item.getArtworkSize())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "filingDate"), item.getFilingDate())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "applicationNumber"), item.getApplicationNumber())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "assignee"), item.getAssignee())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "issuingAuthority"), item.getIssuingAuthority())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "country"), item.getCountry())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "meetingName"), item.getMeetingName())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "conferenceName"), item.getConferenceName())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "court"), item.getCourt())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "references"), item.getReferences())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "reporter"), item.getReporter())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "legalStatus"), item.getLegalStatus())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "priorityNumbers"), item.getPriorityNumbers())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "programmingLanguage"), item.getProgrammingLanguage())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "version"), item.getVersion())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "system"), item.getSystem())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "code"), item.getCode())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "codeNumber"), item.getCodeNumber())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "section"), item.getSection())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "session"), item.getSession())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "committee"), item.getCommittee())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "history"), item.getHistory())); // TODO 
-            tmpHtmlItems.add(addProperty(resource, unknowProperty(model, "legislativeBody"), item.getLegislativeBody())); // TODO
 
             return new ImmutablePair<>(aboutUrlId, tmpHtmlItems.stream()
                     .filter(Objects::nonNull)

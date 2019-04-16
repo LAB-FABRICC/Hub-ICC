@@ -11,10 +11,7 @@ import org.apache.jena.sparql.vocabulary.FOAF;
 import org.apache.jena.vocabulary.*;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -92,31 +89,19 @@ public class RDFFormation extends AbstractRDF<Formation> {
             final var propertyFormationContinue = unknowProperty(model, "formationContinue");
             final var propertyContratApprentissage = unknowProperty(model, "contratApprentissage");
             final var propertyContratProfessionnalisation = unknowProperty(model, "contratProfessionnalisation");
-            final var propertyVoieRecherche = unknowProperty(model, "voieRecherche");
 
             tmpHtmlItems.add(addProperty(resource, propertyFormationInitiale, item.getFormationInitiale())); // TODO
             tmpHtmlItems.add(addProperty(resource, propertyFormationContinue, item.getFormationContinue())); // TODO
             tmpHtmlItems.add(addProperty(resource, propertyContratApprentissage, item.getContratApprentissage())); // TODO
             tmpHtmlItems.add(addProperty(resource, propertyContratProfessionnalisation, item.getContratProfessionnalisation())); // TODO
-            tmpHtmlItems.add(addProperty(resource, propertyVoieRecherche, item.getVoieRecherche())); // TODO
 
-            final var propertyTypeDeStage = unknowProperty(model, "typeDeStage");
-            final var propertyDureeStage = unknowProperty(model, "dureeStage");
-            final var propertyDateDebut = unknowProperty(model, "dateDebut");
-            final var propertyDateFinObligatoire = unknowProperty(model, "dateFinObligatoire");
-            final var propertyServiceStageEmploi = unknowProperty(model, "serviceStageEmploi");
+            final var propertyDureeMinStage = unknowProperty(model, "dureeMinStage");
+            final var propertyDureeMaxStage = unknowProperty(model, "dureeMaxStage");
 
-            tmpHtmlItems.add(addProperty(resource, propertyTypeDeStage, item.getTypeDeStage())); // TODO
-            tmpHtmlItems.add(addProperty(resource, propertyDureeStage, item.getDureeStage())); // TODO
-            tmpHtmlItems.add(addProperty(resource, propertyDateDebut, item.getDateDebut())); // TODO
-            tmpHtmlItems.add(addProperty(resource, propertyDateFinObligatoire, item.getDateFinObligatoire())); // TODO
-            tmpHtmlItems.add(addProperty(resource, propertyServiceStageEmploi, item.getServiceStageEmploi())); // TODO
+            tmpHtmlItems.add(addProperty(resource, propertyDureeMinStage, item.getDureeMinStage())); // TODO
+            tmpHtmlItems.add(addProperty(resource, propertyDureeMaxStage, item.getDureeMaxStage())); // TODO
 
-            tmpHtmlItems.add(addProperty(resource, VCARD4.url, item.getSiteInternetStageEmploi()));
-
-            tmpHtmlItems.add(addProperty(resource, DC_11.subject, item.getExempleSujetMemoire1()));
-            tmpHtmlItems.add(addProperty(resource, DC_11.subject, item.getExempleSujetMemoire2()));
-            tmpHtmlItems.add(addProperty(resource, DC_11.subject, item.getExempleSujetMemoire3()));
+            tmpHtmlItems.add(addProperty(resource, VCARD4.url, item.getCoordonneesServiceStage()));
 
             tmpHtmlItems.add(addProperty(resource, FOAF.name, item.getResponsablePedagogique()));
 
@@ -141,10 +126,61 @@ public class RDFFormation extends AbstractRDF<Formation> {
 
             tmpHtmlItems.add(addResource(model, resource, VCARD4.country_name, "http://dbpedia.org/resource/France"));
 
+            final var propertyCompetenceUniversitaire = unknowProperty(model, "competenceUniversitaire");
+            final var propertyCompetencePro = unknowProperty(model, "competencePro");
+            final var propertyMetier = unknowProperty(model, "metier");
+
+            buildList(
+                    item.getCompetenceUniversitaire1(),
+                    item.getCompetenceUniversitaire2(),
+                    item.getCompetenceUniversitaire3(),
+                    item.getCompetenceUniversitaire4(),
+                    item.getCompetenceUniversitaire5(),
+                    item.getCompetenceUniversitaire6(),
+                    item.getCompetenceUniversitaire7(),
+                    item.getCompetenceUniversitaire8(),
+                    item.getCompetenceUniversitaire9(),
+                    item.getCompetenceUniversitaire10()
+            ).forEach(competence ->
+                    tmpHtmlItems.add(addProperty(resource, propertyCompetenceUniversitaire, competence))
+            );
+
+            buildList(
+                    item.getCompetencePro1(),
+                    item.getCompetencePro2(),
+                    item.getCompetencePro3(),
+                    item.getCompetencePro4(),
+                    item.getCompetencePro5(),
+                    item.getCompetencePro6(),
+                    item.getCompetencePro7(),
+                    item.getCompetencePro8(),
+                    item.getCompetencePro9(),
+                    item.getCompetencePro10()
+            ).forEach(competence ->
+                    tmpHtmlItems.add(addProperty(resource, propertyCompetencePro, competence))
+            );
+
+            buildList(
+                    item.getMetierVise1(),
+                    item.getMetierVise2(),
+                    item.getMetierVise3(),
+                    item.getMetierVise4(),
+                    item.getMetierVise5()
+            ).forEach(metier ->
+                    tmpHtmlItems.add(addProperty(resource, propertyMetier, metier))
+            );
+
+
             return new ImmutablePair<>(aboutUrlId, tmpHtmlItems.stream()
                     .filter(Objects::nonNull)
                     .collect(Collectors.toList()));
 
         };
+    }
+
+    private List<String> buildList(String... items) {
+        return Arrays.stream(items)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
     }
 }
