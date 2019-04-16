@@ -1,5 +1,7 @@
 # Hub-ICC
 
+[![Build Status](https://travis-ci.org/LAB-FABRICC/Hub-ICC.svg?branch=master)](https://travis-ci.org/LAB-FABRICC/Hub-ICC)
+
 ## Objectifs.
 1. Créer deux ontologies décrivant les formations et les laboratoires avec [Protégé](https://protege.stanford.edu/).
 1. Stocker & Publier les données en Open Data avec [Jena](https://jena.apache.org/).
